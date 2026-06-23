@@ -1,0 +1,861 @@
+{
+  "metadata": {
+    "carrera": "Ingeniería en Materiales",
+    "plan": "1217",
+    "sede": "Campus Tecnológico Central Cartago",
+    "fuente": "https://tecdigital.tec.ac.cr/tda-expediente-estudiantil/"
+  },
+  "nodos": [
+    {
+      "nombre": "Examen Diagnóstico",
+      "sigla": "CI0200",
+      "semestre": 0,
+      "creditos": 0,
+      "horas": 0,
+      "area": "Ciencias Básicas"
+    },
+    {
+      "nombre": "Inglés Básico",
+      "sigla": "CI0202",
+      "semestre": 0,
+      "creditos": 2,
+      "horas": 3,
+      "area": "Ciencias Básicas"
+    },
+    {
+      "nombre": "Comunicación Escrita",
+      "sigla": "CI1106",
+      "semestre": 1,
+      "creditos": 2,
+      "horas": 6,
+      "area": "Ciencias Básicas"
+    },
+    {
+      "nombre": "Introducción A La Ciencia E Ing...",
+      "sigla": "CM1103",
+      "semestre": 1,
+      "creditos": 3,
+      "horas": 8,
+      "area": "Ciencia de Materiales"
+    },
+    {
+      "nombre": "Introducción A La Técnica Cienc...",
+      "sigla": "CS1502",
+      "semestre": 1,
+      "creditos": 1,
+      "horas": 2,
+      "area": "Ciencias Sociales"
+    },
+    {
+      "nombre": "Matemática General",
+      "sigla": "MA0101",
+      "semestre": 1,
+      "creditos": 2,
+      "horas": 5,
+      "area": "Matemáticas"
+    },
+    {
+      "nombre": "Dibujo Técnico",
+      "sigla": "MI2101",
+      "semestre": 1,
+      "creditos": 3,
+      "horas": 9,
+      "area": "Ingeniería Mecánica"
+    },
+    {
+      "nombre": "Laboratorio De Química Básica I...",
+      "sigla": "QU1102",
+      "semestre": 1,
+      "creditos": 1,
+      "horas": 2,
+      "area": "Química"
+    },
+    {
+      "nombre": "Química Básica I",
+      "sigla": "QU1106",
+      "semestre": 1,
+      "creditos": 3,
+      "horas": 4,
+      "area": "Química"
+    },
+    {
+      "nombre": "Actividad Cultural I",
+      "sigla": "SE1100",
+      "semestre": 1,
+      "creditos": 0,
+      "horas": 2,
+      "area": "Deportes y Cultura"
+    },
+    {
+      "nombre": "Elementos De Computación",
+      "sigla": "CA2125",
+      "semestre": 2,
+      "creditos": 3,
+      "horas": 4,
+      "area": "Ciencias Básicas"
+    },
+    {
+      "nombre": "Comunicación Oral",
+      "sigla": "CI1107",
+      "semestre": 2,
+      "creditos": 1,
+      "horas": 3,
+      "area": "Ciencias Básicas"
+    },
+    {
+      "nombre": "Inglés I",
+      "sigla": "CI1230",
+      "semestre": 2,
+      "creditos": 2,
+      "horas": 6,
+      "area": "Ciencias Básicas"
+    },
+    {
+      "nombre": "Física General I",
+      "sigla": "FI1101",
+      "semestre": 2,
+      "creditos": 3,
+      "horas": 4,
+      "area": "Física"
+    },
+    {
+      "nombre": "Laboratorio Física General I",
+      "sigla": "FI1201",
+      "semestre": 2,
+      "creditos": 1,
+      "horas": 2,
+      "area": "Física"
+    },
+    {
+      "nombre": "Cálculo Diferencial E Integral",
+      "sigla": "MA1102",
+      "semestre": 2,
+      "creditos": 4,
+      "horas": 5,
+      "area": "Matemáticas"
+    },
+    {
+      "nombre": "Laboratorio De Química Básica I...",
+      "sigla": "QU1104",
+      "semestre": 2,
+      "creditos": 1,
+      "horas": 2,
+      "area": "Química"
+    },
+    {
+      "nombre": "Química Básica Ii",
+      "sigla": "QU1107",
+      "semestre": 2,
+      "creditos": 3,
+      "horas": 4,
+      "area": "Química"
+    },
+    {
+      "nombre": "Inglés Ii",
+      "sigla": "CI1231",
+      "semestre": 3,
+      "creditos": 2,
+      "horas": 3,
+      "area": "Ciencias Básicas"
+    },
+    {
+      "nombre": "Termodinámica",
+      "sigla": "CM2103",
+      "semestre": 3,
+      "creditos": 3,
+      "horas": 4,
+      "area": "Ciencia de Materiales"
+    },
+    {
+      "nombre": "Física General Ii",
+      "sigla": "FI1102",
+      "semestre": 3,
+      "creditos": 3,
+      "horas": 4,
+      "area": "Física"
+    },
+    {
+      "nombre": "Laboratorio Física General Ii",
+      "sigla": "FI1202",
+      "semestre": 3,
+      "creditos": 1,
+      "horas": 2,
+      "area": "Física"
+    },
+    {
+      "nombre": "Cálculo Y Álgebra Lineal",
+      "sigla": "MA1103",
+      "semestre": 3,
+      "creditos": 4,
+      "horas": 4,
+      "area": "Matemáticas"
+    },
+    {
+      "nombre": "Química Orgánica",
+      "sigla": "QU2403",
+      "semestre": 3,
+      "creditos": 3,
+      "horas": 4,
+      "area": "Química"
+    },
+    {
+      "nombre": "Laboratorio De Química Orgánica...",
+      "sigla": "QU2404",
+      "semestre": 3,
+      "creditos": 2,
+      "horas": 4,
+      "area": "Química"
+    },
+    {
+      "nombre": "Actividad Deportiva I",
+      "sigla": "SE1200",
+      "semestre": 3,
+      "creditos": 0,
+      "horas": 2,
+      "area": "Deportes y Cultura"
+    },
+    {
+      "nombre": "Metalurgia Física",
+      "sigla": "CM2401",
+      "semestre": 4,
+      "creditos": 3,
+      "horas": 9,
+      "area": "Ciencia de Materiales"
+    },
+    {
+      "nombre": "Laboratorio De Metalurgia Físic...",
+      "sigla": "CM2402",
+      "semestre": 4,
+      "creditos": 1,
+      "horas": 3,
+      "area": "Ciencia de Materiales"
+    },
+    {
+      "nombre": "Termodinámica De Materiales",
+      "sigla": "CM3103",
+      "semestre": 4,
+      "creditos": 3,
+      "horas": 4,
+      "area": "Ciencia de Materiales"
+    },
+    {
+      "nombre": "Ecuaciones Diferenciales",
+      "sigla": "MA2105",
+      "semestre": 4,
+      "creditos": 4,
+      "horas": 4,
+      "area": "Matemáticas"
+    },
+    {
+      "nombre": "Estática",
+      "sigla": "MI2106",
+      "semestre": 4,
+      "creditos": 3,
+      "horas": 4,
+      "area": "Ingeniería Mecánica"
+    },
+    {
+      "nombre": "Dibujo Industrial",
+      "sigla": "MI3124",
+      "semestre": 4,
+      "creditos": 4,
+      "horas": 4,
+      "area": "Ingeniería Mecánica"
+    },
+    {
+      "nombre": "Actividad Cultural-Deportiva",
+      "sigla": "SE1400",
+      "semestre": 4,
+      "creditos": 0,
+      "horas": 2,
+      "area": "Deportes y Cultura"
+    },
+    {
+      "nombre": "Métodos Numéricos Para Ingenier...",
+      "sigla": "CM3207",
+      "semestre": 5,
+      "creditos": 3,
+      "horas": 4,
+      "area": "Ciencia de Materiales"
+    },
+    {
+      "nombre": "Materiales Poliméricos",
+      "sigla": "CM3501",
+      "semestre": 5,
+      "creditos": 3,
+      "horas": 9,
+      "area": "Ciencia de Materiales"
+    },
+    {
+      "nombre": "Relaciones Laborales",
+      "sigla": "CS2303",
+      "semestre": 5,
+      "creditos": 2,
+      "horas": 6,
+      "area": "Ciencias Sociales"
+    },
+    {
+      "nombre": "Centros De Formación Humanístic...",
+      "sigla": "FH1000",
+      "semestre": 5,
+      "creditos": 0,
+      "horas": 2,
+      "area": "Formación Humanística"
+    },
+    {
+      "nombre": "Resistencia De Materiales",
+      "sigla": "MI3115",
+      "semestre": 5,
+      "creditos": 3,
+      "horas": 4,
+      "area": "Ingeniería Mecánica"
+    },
+    {
+      "nombre": "Electrotecnia",
+      "sigla": "MI4510",
+      "semestre": 5,
+      "creditos": 3,
+      "horas": 4,
+      "area": "Ingeniería Mecánica"
+    },
+    {
+      "nombre": "Probabilidad Y Estadística",
+      "sigla": "PI2609",
+      "semestre": 5,
+      "creditos": 2,
+      "horas": 3,
+      "area": "General"
+    },
+    {
+      "nombre": "Fundamentos De Seguridad E Higi...",
+      "sigla": "SO2601",
+      "semestre": 5,
+      "creditos": 1,
+      "horas": 2,
+      "area": "General"
+    },
+    {
+      "nombre": "Metrología Para Ingeniería",
+      "sigla": "CM3208",
+      "semestre": 6,
+      "creditos": 3,
+      "horas": 4,
+      "area": "Ciencia de Materiales"
+    },
+    {
+      "nombre": "Mecánica De Fluidos",
+      "sigla": "CM3601",
+      "semestre": 6,
+      "creditos": 3,
+      "horas": 9,
+      "area": "Ciencia de Materiales"
+    },
+    {
+      "nombre": "Tecnología De Aleaciones Metáli...",
+      "sigla": "CM3602",
+      "semestre": 6,
+      "creditos": 3,
+      "horas": 9,
+      "area": "Ciencia de Materiales"
+    },
+    {
+      "nombre": "Mecánica De Materiales Avanzada...",
+      "sigla": "CM3603",
+      "semestre": 6,
+      "creditos": 3,
+      "horas": 9,
+      "area": "Ciencia de Materiales"
+    },
+    {
+      "nombre": "Laboratorio Tecnología Aleacion...",
+      "sigla": "CM4202",
+      "semestre": 6,
+      "creditos": 2,
+      "horas": 3,
+      "area": "Ciencia de Materiales"
+    },
+    {
+      "nombre": "Tecnología De Polímeros",
+      "sigla": "CM4305",
+      "semestre": 6,
+      "creditos": 2,
+      "horas": 3,
+      "area": "Ciencia de Materiales"
+    },
+    {
+      "nombre": "Seminario De Ética Para La Inge...",
+      "sigla": "CS3404",
+      "semestre": 6,
+      "creditos": 2,
+      "horas": 5,
+      "area": "Ciencias Sociales"
+    },
+    {
+      "nombre": "Ingeniería Económica",
+      "sigla": "AE5121",
+      "semestre": 7,
+      "creditos": 3,
+      "horas": 3,
+      "area": "Administración e Ingeniería"
+    },
+    {
+      "nombre": "Tecnología De Maquinado",
+      "sigla": "CM3205",
+      "semestre": 7,
+      "creditos": 3,
+      "horas": 4,
+      "area": "Ciencia de Materiales"
+    },
+    {
+      "nombre": "Conformado De Materiales",
+      "sigla": "CM4307",
+      "semestre": 7,
+      "creditos": 4,
+      "horas": 4,
+      "area": "Ciencia de Materiales"
+    },
+    {
+      "nombre": "Transferencia De Calor Y Masa",
+      "sigla": "CM4701",
+      "semestre": 7,
+      "creditos": 3,
+      "horas": 9,
+      "area": "Ciencia de Materiales"
+    },
+    {
+      "nombre": "Materiales Cerámicos Y Compuest...",
+      "sigla": "CM4702",
+      "semestre": 7,
+      "creditos": 3,
+      "horas": 9,
+      "area": "Ciencia de Materiales"
+    },
+    {
+      "nombre": "Seminario De Estudios Costarric...",
+      "sigla": "CS4402",
+      "semestre": 7,
+      "creditos": 2,
+      "horas": 3,
+      "area": "Ciencias Sociales"
+    },
+    {
+      "nombre": "Modelación Y Simulación",
+      "sigla": "CM4101",
+      "semestre": 8,
+      "creditos": 4,
+      "horas": 4,
+      "area": "Ciencia de Materiales"
+    },
+    {
+      "nombre": "Caracterización De Materiales",
+      "sigla": "CM4801",
+      "semestre": 8,
+      "creditos": 4,
+      "horas": 4,
+      "area": "Ciencia de Materiales"
+    },
+    {
+      "nombre": "Gestión De Proyectos",
+      "sigla": "CM4802",
+      "semestre": 8,
+      "creditos": 3,
+      "horas": 9,
+      "area": "Ciencia de Materiales"
+    },
+    {
+      "nombre": "Taller De Diseño En Ciencia E I...",
+      "sigla": "CM4803",
+      "semestre": 8,
+      "creditos": 7,
+      "horas": 21,
+      "area": "Ciencia de Materiales"
+    }
+  ],
+  "enlaces": [
+    {
+      "fuente": "QU1106",
+      "destino": "QU1102",
+      "tipo": "correquisito"
+    },
+    {
+      "fuente": "QU1102",
+      "destino": "QU1106",
+      "tipo": "correquisito"
+    },
+    {
+      "fuente": "MA0101",
+      "destino": "CA2125",
+      "tipo": "requisito"
+    },
+    {
+      "fuente": "CI1106",
+      "destino": "CI1107",
+      "tipo": "requisito"
+    },
+    {
+      "fuente": "CI0200",
+      "destino": "CI1230",
+      "tipo": "requisito"
+    },
+    {
+      "fuente": "CI0202",
+      "destino": "CI1230",
+      "tipo": "requisito"
+    },
+    {
+      "fuente": "MA1102",
+      "destino": "FI1101",
+      "tipo": "correquisito"
+    },
+    {
+      "fuente": "FI1101",
+      "destino": "FI1201",
+      "tipo": "correquisito"
+    },
+    {
+      "fuente": "MA0101",
+      "destino": "MA1102",
+      "tipo": "requisito"
+    },
+    {
+      "fuente": "QU1102",
+      "destino": "QU1104",
+      "tipo": "requisito"
+    },
+    {
+      "fuente": "QU1106",
+      "destino": "QU1104",
+      "tipo": "requisito"
+    },
+    {
+      "fuente": "QU1107",
+      "destino": "QU1104",
+      "tipo": "correquisito"
+    },
+    {
+      "fuente": "QU1102",
+      "destino": "QU1107",
+      "tipo": "requisito"
+    },
+    {
+      "fuente": "QU1106",
+      "destino": "QU1107",
+      "tipo": "requisito"
+    },
+    {
+      "fuente": "QU1104",
+      "destino": "QU1107",
+      "tipo": "correquisito"
+    },
+    {
+      "fuente": "CI1230",
+      "destino": "CI1231",
+      "tipo": "requisito"
+    },
+    {
+      "fuente": "MA1102",
+      "destino": "CM2103",
+      "tipo": "requisito"
+    },
+    {
+      "fuente": "QU1107",
+      "destino": "CM2103",
+      "tipo": "requisito"
+    },
+    {
+      "fuente": "FI1101",
+      "destino": "FI1102",
+      "tipo": "requisito"
+    },
+    {
+      "fuente": "FI1201",
+      "destino": "FI1102",
+      "tipo": "requisito"
+    },
+    {
+      "fuente": "FI1101",
+      "destino": "FI1202",
+      "tipo": "requisito"
+    },
+    {
+      "fuente": "FI1201",
+      "destino": "FI1202",
+      "tipo": "requisito"
+    },
+    {
+      "fuente": "FI1102",
+      "destino": "FI1202",
+      "tipo": "correquisito"
+    },
+    {
+      "fuente": "MA1102",
+      "destino": "MA1103",
+      "tipo": "requisito"
+    },
+    {
+      "fuente": "QU1104",
+      "destino": "QU2403",
+      "tipo": "requisito"
+    },
+    {
+      "fuente": "QU1107",
+      "destino": "QU2403",
+      "tipo": "requisito"
+    },
+    {
+      "fuente": "QU2404",
+      "destino": "QU2403",
+      "tipo": "correquisito"
+    },
+    {
+      "fuente": "QU1104",
+      "destino": "QU2404",
+      "tipo": "requisito"
+    },
+    {
+      "fuente": "QU1107",
+      "destino": "QU2404",
+      "tipo": "requisito"
+    },
+    {
+      "fuente": "QU2403",
+      "destino": "QU2404",
+      "tipo": "correquisito"
+    },
+    {
+      "fuente": "CM2103",
+      "destino": "CM2401",
+      "tipo": "requisito"
+    },
+    {
+      "fuente": "CM3103",
+      "destino": "CM2401",
+      "tipo": "correquisito"
+    },
+    {
+      "fuente": "CM1103",
+      "destino": "CM2402",
+      "tipo": "requisito"
+    },
+    {
+      "fuente": "CM2401",
+      "destino": "CM2402",
+      "tipo": "correquisito"
+    },
+    {
+      "fuente": "CM2103",
+      "destino": "CM3103",
+      "tipo": "requisito"
+    },
+    {
+      "fuente": "MA1103",
+      "destino": "MA2105",
+      "tipo": "requisito"
+    },
+    {
+      "fuente": "FI1101",
+      "destino": "MI2106",
+      "tipo": "requisito"
+    },
+    {
+      "fuente": "FI1201",
+      "destino": "MI2106",
+      "tipo": "requisito"
+    },
+    {
+      "fuente": "MI2101",
+      "destino": "MI3124",
+      "tipo": "requisito"
+    },
+    {
+      "fuente": "CA2125",
+      "destino": "CM3207",
+      "tipo": "requisito"
+    },
+    {
+      "fuente": "MA2105",
+      "destino": "CM3207",
+      "tipo": "requisito"
+    },
+    {
+      "fuente": "QU2403",
+      "destino": "CM3501",
+      "tipo": "requisito"
+    },
+    {
+      "fuente": "QU2404",
+      "destino": "CM3501",
+      "tipo": "requisito"
+    },
+    {
+      "fuente": "CS1502",
+      "destino": "CS2303",
+      "tipo": "requisito"
+    },
+    {
+      "fuente": "MI2106",
+      "destino": "MI3115",
+      "tipo": "requisito"
+    },
+    {
+      "fuente": "FI1102",
+      "destino": "MI4510",
+      "tipo": "requisito"
+    },
+    {
+      "fuente": "FI1202",
+      "destino": "MI4510",
+      "tipo": "requisito"
+    },
+    {
+      "fuente": "MA1103",
+      "destino": "PI2609",
+      "tipo": "requisito"
+    },
+    {
+      "fuente": "CS2303",
+      "destino": "SO2601",
+      "tipo": "correquisito"
+    },
+    {
+      "fuente": "PI2609",
+      "destino": "CM3208",
+      "tipo": "requisito"
+    },
+    {
+      "fuente": "CM3103",
+      "destino": "CM3601",
+      "tipo": "requisito"
+    },
+    {
+      "fuente": "MA2105",
+      "destino": "CM3601",
+      "tipo": "requisito"
+    },
+    {
+      "fuente": "CM2401",
+      "destino": "CM3602",
+      "tipo": "requisito"
+    },
+    {
+      "fuente": "CM3103",
+      "destino": "CM3602",
+      "tipo": "requisito"
+    },
+    {
+      "fuente": "CM2401",
+      "destino": "CM3603",
+      "tipo": "requisito"
+    },
+    {
+      "fuente": "MI3115",
+      "destino": "CM3603",
+      "tipo": "requisito"
+    },
+    {
+      "fuente": "CM2401",
+      "destino": "CM4202",
+      "tipo": "requisito"
+    },
+    {
+      "fuente": "CM3103",
+      "destino": "CM4202",
+      "tipo": "requisito"
+    },
+    {
+      "fuente": "CM3602",
+      "destino": "CM4202",
+      "tipo": "correquisito"
+    },
+    {
+      "fuente": "CM3501",
+      "destino": "CM4305",
+      "tipo": "requisito"
+    },
+    {
+      "fuente": "CS1502",
+      "destino": "CS3404",
+      "tipo": "requisito"
+    },
+    {
+      "fuente": "PI2609",
+      "destino": "AE5121",
+      "tipo": "requisito"
+    },
+    {
+      "fuente": "CM3208",
+      "destino": "CM3205",
+      "tipo": "requisito"
+    },
+    {
+      "fuente": "CM3602",
+      "destino": "CM3205",
+      "tipo": "requisito"
+    },
+    {
+      "fuente": "CM3603",
+      "destino": "CM4307",
+      "tipo": "requisito"
+    },
+    {
+      "fuente": "CM3207",
+      "destino": "CM4701",
+      "tipo": "requisito"
+    },
+    {
+      "fuente": "CM3601",
+      "destino": "CM4701",
+      "tipo": "requisito"
+    },
+    {
+      "fuente": "CM2401",
+      "destino": "CM4702",
+      "tipo": "requisito"
+    },
+    {
+      "fuente": "CM4305",
+      "destino": "CM4702",
+      "tipo": "requisito"
+    },
+    {
+      "fuente": "CS3404",
+      "destino": "CS4402",
+      "tipo": "requisito"
+    },
+    {
+      "fuente": "CM3603",
+      "destino": "CM4101",
+      "tipo": "requisito"
+    },
+    {
+      "fuente": "CM4701",
+      "destino": "CM4101",
+      "tipo": "requisito"
+    },
+    {
+      "fuente": "CM4305",
+      "destino": "CM4801",
+      "tipo": "requisito"
+    },
+    {
+      "fuente": "CM4702",
+      "destino": "CM4801",
+      "tipo": "requisito"
+    },
+    {
+      "fuente": "AE5121",
+      "destino": "CM4802",
+      "tipo": "requisito"
+    },
+    {
+      "fuente": "CM4101",
+      "destino": "CM4803",
+      "tipo": "correquisito"
+    },
+    {
+      "fuente": "CM4802",
+      "destino": "CM4803",
+      "tipo": "correquisito"
+    }
+  ]
+}
