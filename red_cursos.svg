@@ -1,0 +1,855 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<svg width="1490" height="750"
+     xmlns="http://www.w3.org/2000/svg"
+     xmlns:v="https://odviz.org/1.0/">
+
+  <!-- ── ODViz: tabla de datos incrustada ──────────────────────────────── -->
+  <metadata>
+    <v:table name="plan_materiales"
+             description="Plan de Estudios - Ingeniería en Materiales (TEC, Plan 1217)"
+             visualization="chart"
+             columns="id,nombre,sigla,semestre,creditos,horas,area">
+      <v:row id="row-CI0200" hrefs="node-CI0200">CI0200,Examen Diagnóstico,CI0200,0,0,0,Ciencias Básicas</v:row>
+      <v:row id="row-CI0202" hrefs="node-CI0202">CI0202,Inglés Básico,CI0202,0,2,3,Ciencias Básicas</v:row>
+      <v:row id="row-CI1106" hrefs="node-CI1106">CI1106,Comunicación Escrita,CI1106,1,2,6,Ciencias Básicas</v:row>
+      <v:row id="row-CM1103" hrefs="node-CM1103">CM1103,Introducción A La Ciencia E Ing...,CM1103,1,3,8,Ciencia de Materiales</v:row>
+      <v:row id="row-CS1502" hrefs="node-CS1502">CS1502,Introducción A La Técnica Cienc...,CS1502,1,1,2,Ciencias Sociales</v:row>
+      <v:row id="row-MA0101" hrefs="node-MA0101">MA0101,Matemática General,MA0101,1,2,5,Matemáticas</v:row>
+      <v:row id="row-MI2101" hrefs="node-MI2101">MI2101,Dibujo Técnico,MI2101,1,3,9,Ingeniería Mecánica</v:row>
+      <v:row id="row-QU1102" hrefs="node-QU1102">QU1102,Laboratorio De Química Básica I...,QU1102,1,1,2,Química</v:row>
+      <v:row id="row-QU1106" hrefs="node-QU1106">QU1106,Química Básica I,QU1106,1,3,4,Química</v:row>
+      <v:row id="row-SE1100" hrefs="node-SE1100">SE1100,Actividad Cultural I,SE1100,1,0,2,Deportes y Cultura</v:row>
+      <v:row id="row-CA2125" hrefs="node-CA2125">CA2125,Elementos De Computación,CA2125,2,3,4,Ciencias Básicas</v:row>
+      <v:row id="row-CI1107" hrefs="node-CI1107">CI1107,Comunicación Oral,CI1107,2,1,3,Ciencias Básicas</v:row>
+      <v:row id="row-CI1230" hrefs="node-CI1230">CI1230,Inglés I,CI1230,2,2,6,Ciencias Básicas</v:row>
+      <v:row id="row-FI1101" hrefs="node-FI1101">FI1101,Física General I,FI1101,2,3,4,Física</v:row>
+      <v:row id="row-FI1201" hrefs="node-FI1201">FI1201,Laboratorio Física General I,FI1201,2,1,2,Física</v:row>
+      <v:row id="row-MA1102" hrefs="node-MA1102">MA1102,Cálculo Diferencial E Integral,MA1102,2,4,5,Matemáticas</v:row>
+      <v:row id="row-QU1104" hrefs="node-QU1104">QU1104,Laboratorio De Química Básica I...,QU1104,2,1,2,Química</v:row>
+      <v:row id="row-QU1107" hrefs="node-QU1107">QU1107,Química Básica Ii,QU1107,2,3,4,Química</v:row>
+      <v:row id="row-CI1231" hrefs="node-CI1231">CI1231,Inglés Ii,CI1231,3,2,3,Ciencias Básicas</v:row>
+      <v:row id="row-CM2103" hrefs="node-CM2103">CM2103,Termodinámica,CM2103,3,3,4,Ciencia de Materiales</v:row>
+      <v:row id="row-FI1102" hrefs="node-FI1102">FI1102,Física General Ii,FI1102,3,3,4,Física</v:row>
+      <v:row id="row-FI1202" hrefs="node-FI1202">FI1202,Laboratorio Física General Ii,FI1202,3,1,2,Física</v:row>
+      <v:row id="row-MA1103" hrefs="node-MA1103">MA1103,Cálculo Y Álgebra Lineal,MA1103,3,4,4,Matemáticas</v:row>
+      <v:row id="row-QU2403" hrefs="node-QU2403">QU2403,Química Orgánica,QU2403,3,3,4,Química</v:row>
+      <v:row id="row-QU2404" hrefs="node-QU2404">QU2404,Laboratorio De Química Orgánica...,QU2404,3,2,4,Química</v:row>
+      <v:row id="row-SE1200" hrefs="node-SE1200">SE1200,Actividad Deportiva I,SE1200,3,0,2,Deportes y Cultura</v:row>
+      <v:row id="row-CM2401" hrefs="node-CM2401">CM2401,Metalurgia Física,CM2401,4,3,9,Ciencia de Materiales</v:row>
+      <v:row id="row-CM2402" hrefs="node-CM2402">CM2402,Laboratorio De Metalurgia Físic...,CM2402,4,1,3,Ciencia de Materiales</v:row>
+      <v:row id="row-CM3103" hrefs="node-CM3103">CM3103,Termodinámica De Materiales,CM3103,4,3,4,Ciencia de Materiales</v:row>
+      <v:row id="row-MA2105" hrefs="node-MA2105">MA2105,Ecuaciones Diferenciales,MA2105,4,4,4,Matemáticas</v:row>
+      <v:row id="row-MI2106" hrefs="node-MI2106">MI2106,Estática,MI2106,4,3,4,Ingeniería Mecánica</v:row>
+      <v:row id="row-MI3124" hrefs="node-MI3124">MI3124,Dibujo Industrial,MI3124,4,4,4,Ingeniería Mecánica</v:row>
+      <v:row id="row-SE1400" hrefs="node-SE1400">SE1400,Actividad Cultural-Deportiva,SE1400,4,0,2,Deportes y Cultura</v:row>
+      <v:row id="row-CM3207" hrefs="node-CM3207">CM3207,Métodos Numéricos Para Ingenier...,CM3207,5,3,4,Ciencia de Materiales</v:row>
+      <v:row id="row-CM3501" hrefs="node-CM3501">CM3501,Materiales Poliméricos,CM3501,5,3,9,Ciencia de Materiales</v:row>
+      <v:row id="row-CS2303" hrefs="node-CS2303">CS2303,Relaciones Laborales,CS2303,5,2,6,Ciencias Sociales</v:row>
+      <v:row id="row-FH1000" hrefs="node-FH1000">FH1000,Centros De Formación Humanístic...,FH1000,5,0,2,Formación Humanística</v:row>
+      <v:row id="row-MI3115" hrefs="node-MI3115">MI3115,Resistencia De Materiales,MI3115,5,3,4,Ingeniería Mecánica</v:row>
+      <v:row id="row-MI4510" hrefs="node-MI4510">MI4510,Electrotecnia,MI4510,5,3,4,Ingeniería Mecánica</v:row>
+      <v:row id="row-PI2609" hrefs="node-PI2609">PI2609,Probabilidad Y Estadística,PI2609,5,2,3,General</v:row>
+      <v:row id="row-SO2601" hrefs="node-SO2601">SO2601,Fundamentos De Seguridad E Higi...,SO2601,5,1,2,General</v:row>
+      <v:row id="row-CM3208" hrefs="node-CM3208">CM3208,Metrología Para Ingeniería,CM3208,6,3,4,Ciencia de Materiales</v:row>
+      <v:row id="row-CM3601" hrefs="node-CM3601">CM3601,Mecánica De Fluidos,CM3601,6,3,9,Ciencia de Materiales</v:row>
+      <v:row id="row-CM3602" hrefs="node-CM3602">CM3602,Tecnología De Aleaciones Metáli...,CM3602,6,3,9,Ciencia de Materiales</v:row>
+      <v:row id="row-CM3603" hrefs="node-CM3603">CM3603,Mecánica De Materiales Avanzada...,CM3603,6,3,9,Ciencia de Materiales</v:row>
+      <v:row id="row-CM4202" hrefs="node-CM4202">CM4202,Laboratorio Tecnología Aleacion...,CM4202,6,2,3,Ciencia de Materiales</v:row>
+      <v:row id="row-CM4305" hrefs="node-CM4305">CM4305,Tecnología De Polímeros,CM4305,6,2,3,Ciencia de Materiales</v:row>
+      <v:row id="row-CS3404" hrefs="node-CS3404">CS3404,Seminario De Ética Para La Inge...,CS3404,6,2,5,Ciencias Sociales</v:row>
+      <v:row id="row-AE5121" hrefs="node-AE5121">AE5121,Ingeniería Económica,AE5121,7,3,3,Administración e Ingeniería</v:row>
+      <v:row id="row-CM3205" hrefs="node-CM3205">CM3205,Tecnología De Maquinado,CM3205,7,3,4,Ciencia de Materiales</v:row>
+      <v:row id="row-CM4307" hrefs="node-CM4307">CM4307,Conformado De Materiales,CM4307,7,4,4,Ciencia de Materiales</v:row>
+      <v:row id="row-CM4701" hrefs="node-CM4701">CM4701,Transferencia De Calor Y Masa,CM4701,7,3,9,Ciencia de Materiales</v:row>
+      <v:row id="row-CM4702" hrefs="node-CM4702">CM4702,Materiales Cerámicos Y Compuest...,CM4702,7,3,9,Ciencia de Materiales</v:row>
+      <v:row id="row-CS4402" hrefs="node-CS4402">CS4402,Seminario De Estudios Costarric...,CS4402,7,2,3,Ciencias Sociales</v:row>
+      <v:row id="row-CM4101" hrefs="node-CM4101">CM4101,Modelación Y Simulación,CM4101,8,4,4,Ciencia de Materiales</v:row>
+      <v:row id="row-CM4801" hrefs="node-CM4801">CM4801,Caracterización De Materiales,CM4801,8,4,4,Ciencia de Materiales</v:row>
+      <v:row id="row-CM4802" hrefs="node-CM4802">CM4802,Gestión De Proyectos,CM4802,8,3,9,Ciencia de Materiales</v:row>
+      <v:row id="row-CM4803" hrefs="node-CM4803">CM4803,Taller De Diseño En Ciencia E I...,CM4803,8,7,21,Ciencia de Materiales</v:row>
+    </v:table>
+  </metadata>
+
+  <style>
+    .titulo     { font-family: sans-serif; font-size: 15px; font-weight: bold; fill: #111; }
+    .subtitulo  { font-family: sans-serif; font-size: 10px; fill: #666; }
+    .sem-lbl    { font-family: sans-serif; font-size: 11px; font-weight: bold; fill: #444; }
+    .node-lbl   { font-family: sans-serif; font-size: 8px; fill: #fff; text-anchor: middle;
+                  dominant-baseline: middle; pointer-events: none; font-weight: bold; }
+    .leg-hdr    { font-family: sans-serif; font-size: 10px; font-weight: bold; fill: #222; }
+    .leg-txt    { font-family: sans-serif; font-size: 9px; fill: #333; }
+    .link-req   { stroke: #555; stroke-width: 1.2; fill: none; opacity: 0.45; }
+    .link-correq{ stroke: #d94701; stroke-width: 1.8; fill: none; opacity: 0.55;
+                  stroke-dasharray: 6,3; }
+  </style>
+
+  <defs>
+    <marker id="arr-req" markerWidth="7" markerHeight="5"
+            refX="6" refY="2.5" orient="auto" markerUnits="strokeWidth">
+      <polygon points="0 0, 7 2.5, 0 5" fill="#555" opacity="0.6"/>
+    </marker>
+    <marker id="arr-correq" markerWidth="7" markerHeight="5"
+            refX="6" refY="2.5" orient="auto" markerUnits="strokeWidth">
+      <polygon points="0 0, 7 2.5, 0 5" fill="#d94701" opacity="0.7"/>
+    </marker>
+  </defs>
+
+  <!-- ── Título ─────────────────────────────────────────────────────────── -->
+  <text class="titulo" x="745.0" y="28" text-anchor="middle">
+    Red de Cursos — Ingeniería en Materiales (TEC, Plan 1217)
+  </text>
+  <text class="subtitulo" x="745.0" y="46" text-anchor="middle">
+    Color: Área  |  Tamaño nodo: Créditos  |  Grosor borde: Horas  |  Línea sólida: Requisito  |  Línea punteada: Correquisito
+  </text>
+
+  <!-- ── Franjas de columna (semestres) ────────────────────────────────── -->
+  <rect x="55.0" y="62" width="133.33333333333334" height="643"
+        fill="#f4f4f4" opacity="0.7"/>
+  <line x1="55.0" y1="62" x2="55.0" y2="705"
+        stroke="#d0d0d0" stroke-width="0.8"/>
+  <text class="sem-lbl" x="121.66666666666667" y="80" text-anchor="middle">
+Prev.  </text>
+  <line x1="188.33333333333334" y1="62" x2="188.33333333333334" y2="705"
+        stroke="#d0d0d0" stroke-width="0.8"/>
+  <text class="sem-lbl" x="255.0" y="80" text-anchor="middle">
+Sem 1  </text>
+  <rect x="321.6666666666667" y="62" width="133.33333333333334" height="643"
+        fill="#f4f4f4" opacity="0.7"/>
+  <line x1="321.6666666666667" y1="62" x2="321.6666666666667" y2="705"
+        stroke="#d0d0d0" stroke-width="0.8"/>
+  <text class="sem-lbl" x="388.33333333333337" y="80" text-anchor="middle">
+Sem 2  </text>
+  <line x1="455.0" y1="62" x2="455.0" y2="705"
+        stroke="#d0d0d0" stroke-width="0.8"/>
+  <text class="sem-lbl" x="521.6666666666666" y="80" text-anchor="middle">
+Sem 3  </text>
+  <rect x="588.3333333333334" y="62" width="133.33333333333334" height="643"
+        fill="#f4f4f4" opacity="0.7"/>
+  <line x1="588.3333333333334" y1="62" x2="588.3333333333334" y2="705"
+        stroke="#d0d0d0" stroke-width="0.8"/>
+  <text class="sem-lbl" x="655.0" y="80" text-anchor="middle">
+Sem 4  </text>
+  <line x1="721.6666666666667" y1="62" x2="721.6666666666667" y2="705"
+        stroke="#d0d0d0" stroke-width="0.8"/>
+  <text class="sem-lbl" x="788.3333333333334" y="80" text-anchor="middle">
+Sem 5  </text>
+  <rect x="855.0" y="62" width="133.33333333333334" height="643"
+        fill="#f4f4f4" opacity="0.7"/>
+  <line x1="855.0" y1="62" x2="855.0" y2="705"
+        stroke="#d0d0d0" stroke-width="0.8"/>
+  <text class="sem-lbl" x="921.6666666666666" y="80" text-anchor="middle">
+Sem 6  </text>
+  <line x1="988.3333333333334" y1="62" x2="988.3333333333334" y2="705"
+        stroke="#d0d0d0" stroke-width="0.8"/>
+  <text class="sem-lbl" x="1055.0" y="80" text-anchor="middle">
+Sem 7  </text>
+  <rect x="1121.6666666666667" y="62" width="133.33333333333334" height="643"
+        fill="#f4f4f4" opacity="0.7"/>
+  <line x1="1121.6666666666667" y1="62" x2="1121.6666666666667" y2="705"
+        stroke="#d0d0d0" stroke-width="0.8"/>
+  <text class="sem-lbl" x="1188.3333333333335" y="80" text-anchor="middle">
+Sem 8  </text>
+  <line x1="1255" y1="62" x2="1255" y2="705"
+        stroke="#d0d0d0" stroke-width="0.8"/>
+
+  <!-- ── Línea base inferior ───────────────────────────────────────────── -->
+  <line x1="55" y1="705" x2="1255" y2="705"
+        stroke="#ccc" stroke-width="0.8"/>
+
+  <!-- ── Enlaces (dibujados primero, detrás de los nodos) ──────────────── -->
+  <line class="link-correq" href="#row-QU1106"
+        x1="255.0" y1="499.5" x2="255.0" y2="431.5"
+        marker-end="url(#arr-correq)"/>
+  <line class="link-correq" href="#row-QU1102"
+        x1="255.0" y1="431.5" x2="255.0" y2="499.5"
+        marker-end="url(#arr-correq)"/>
+  <line class="link-req" href="#row-MA0101"
+        x1="255.0" y1="295.5" x2="388.33333333333337" y2="91.5"
+        marker-end="url(#arr-req)"/>
+  <line class="link-req" href="#row-CI1106"
+        x1="255.0" y1="91.5" x2="388.33333333333337" y2="159.5"
+        marker-end="url(#arr-req)"/>
+  <line class="link-req" href="#row-CI0200"
+        x1="121.66666666666667" y1="295.5" x2="388.33333333333337" y2="227.5"
+        marker-end="url(#arr-req)"/>
+  <line class="link-req" href="#row-CI0202"
+        x1="121.66666666666667" y1="363.5" x2="388.33333333333337" y2="227.5"
+        marker-end="url(#arr-req)"/>
+  <line class="link-correq" href="#row-MA1102"
+        x1="388.33333333333337" y1="431.5" x2="388.33333333333337" y2="295.5"
+        marker-end="url(#arr-correq)"/>
+  <line class="link-correq" href="#row-FI1101"
+        x1="388.33333333333337" y1="295.5" x2="388.33333333333337" y2="363.5"
+        marker-end="url(#arr-correq)"/>
+  <line class="link-req" href="#row-MA0101"
+        x1="255.0" y1="295.5" x2="388.33333333333337" y2="431.5"
+        marker-end="url(#arr-req)"/>
+  <line class="link-req" href="#row-QU1102"
+        x1="255.0" y1="431.5" x2="388.33333333333337" y2="499.5"
+        marker-end="url(#arr-req)"/>
+  <line class="link-req" href="#row-QU1106"
+        x1="255.0" y1="499.5" x2="388.33333333333337" y2="499.5"
+        marker-end="url(#arr-req)"/>
+  <line class="link-correq" href="#row-QU1107"
+        x1="388.33333333333337" y1="567.5" x2="388.33333333333337" y2="499.5"
+        marker-end="url(#arr-correq)"/>
+  <line class="link-req" href="#row-QU1102"
+        x1="255.0" y1="431.5" x2="388.33333333333337" y2="567.5"
+        marker-end="url(#arr-req)"/>
+  <line class="link-req" href="#row-QU1106"
+        x1="255.0" y1="499.5" x2="388.33333333333337" y2="567.5"
+        marker-end="url(#arr-req)"/>
+  <line class="link-correq" href="#row-QU1104"
+        x1="388.33333333333337" y1="499.5" x2="388.33333333333337" y2="567.5"
+        marker-end="url(#arr-correq)"/>
+  <line class="link-req" href="#row-CI1230"
+        x1="388.33333333333337" y1="227.5" x2="521.6666666666666" y2="91.5"
+        marker-end="url(#arr-req)"/>
+  <line class="link-req" href="#row-MA1102"
+        x1="388.33333333333337" y1="431.5" x2="521.6666666666666" y2="159.5"
+        marker-end="url(#arr-req)"/>
+  <line class="link-req" href="#row-QU1107"
+        x1="388.33333333333337" y1="567.5" x2="521.6666666666666" y2="159.5"
+        marker-end="url(#arr-req)"/>
+  <line class="link-req" href="#row-FI1101"
+        x1="388.33333333333337" y1="295.5" x2="521.6666666666666" y2="227.5"
+        marker-end="url(#arr-req)"/>
+  <line class="link-req" href="#row-FI1201"
+        x1="388.33333333333337" y1="363.5" x2="521.6666666666666" y2="227.5"
+        marker-end="url(#arr-req)"/>
+  <line class="link-req" href="#row-FI1101"
+        x1="388.33333333333337" y1="295.5" x2="521.6666666666666" y2="295.5"
+        marker-end="url(#arr-req)"/>
+  <line class="link-req" href="#row-FI1201"
+        x1="388.33333333333337" y1="363.5" x2="521.6666666666666" y2="295.5"
+        marker-end="url(#arr-req)"/>
+  <line class="link-correq" href="#row-FI1102"
+        x1="521.6666666666666" y1="227.5" x2="521.6666666666666" y2="295.5"
+        marker-end="url(#arr-correq)"/>
+  <line class="link-req" href="#row-MA1102"
+        x1="388.33333333333337" y1="431.5" x2="521.6666666666666" y2="363.5"
+        marker-end="url(#arr-req)"/>
+  <line class="link-req" href="#row-QU1104"
+        x1="388.33333333333337" y1="499.5" x2="521.6666666666666" y2="431.5"
+        marker-end="url(#arr-req)"/>
+  <line class="link-req" href="#row-QU1107"
+        x1="388.33333333333337" y1="567.5" x2="521.6666666666666" y2="431.5"
+        marker-end="url(#arr-req)"/>
+  <line class="link-correq" href="#row-QU2404"
+        x1="521.6666666666666" y1="499.5" x2="521.6666666666666" y2="431.5"
+        marker-end="url(#arr-correq)"/>
+  <line class="link-req" href="#row-QU1104"
+        x1="388.33333333333337" y1="499.5" x2="521.6666666666666" y2="499.5"
+        marker-end="url(#arr-req)"/>
+  <line class="link-req" href="#row-QU1107"
+        x1="388.33333333333337" y1="567.5" x2="521.6666666666666" y2="499.5"
+        marker-end="url(#arr-req)"/>
+  <line class="link-correq" href="#row-QU2403"
+        x1="521.6666666666666" y1="431.5" x2="521.6666666666666" y2="499.5"
+        marker-end="url(#arr-correq)"/>
+  <line class="link-req" href="#row-CM2103"
+        x1="521.6666666666666" y1="159.5" x2="655.0" y2="125.5"
+        marker-end="url(#arr-req)"/>
+  <line class="link-correq" href="#row-CM3103"
+        x1="655.0" y1="261.5" x2="655.0" y2="125.5"
+        marker-end="url(#arr-correq)"/>
+  <line class="link-req" href="#row-CM1103"
+        x1="255.0" y1="159.5" x2="655.0" y2="193.5"
+        marker-end="url(#arr-req)"/>
+  <line class="link-correq" href="#row-CM2401"
+        x1="655.0" y1="125.5" x2="655.0" y2="193.5"
+        marker-end="url(#arr-correq)"/>
+  <line class="link-req" href="#row-CM2103"
+        x1="521.6666666666666" y1="159.5" x2="655.0" y2="261.5"
+        marker-end="url(#arr-req)"/>
+  <line class="link-req" href="#row-MA1103"
+        x1="521.6666666666666" y1="363.5" x2="655.0" y2="329.5"
+        marker-end="url(#arr-req)"/>
+  <line class="link-req" href="#row-FI1101"
+        x1="388.33333333333337" y1="295.5" x2="655.0" y2="397.5"
+        marker-end="url(#arr-req)"/>
+  <line class="link-req" href="#row-FI1201"
+        x1="388.33333333333337" y1="363.5" x2="655.0" y2="397.5"
+        marker-end="url(#arr-req)"/>
+  <line class="link-req" href="#row-MI2101"
+        x1="255.0" y1="363.5" x2="655.0" y2="465.5"
+        marker-end="url(#arr-req)"/>
+  <line class="link-req" href="#row-CA2125"
+        x1="388.33333333333337" y1="91.5" x2="788.3333333333334" y2="91.5"
+        marker-end="url(#arr-req)"/>
+  <line class="link-req" href="#row-MA2105"
+        x1="655.0" y1="329.5" x2="788.3333333333334" y2="91.5"
+        marker-end="url(#arr-req)"/>
+  <line class="link-req" href="#row-QU2403"
+        x1="521.6666666666666" y1="431.5" x2="788.3333333333334" y2="159.5"
+        marker-end="url(#arr-req)"/>
+  <line class="link-req" href="#row-QU2404"
+        x1="521.6666666666666" y1="499.5" x2="788.3333333333334" y2="159.5"
+        marker-end="url(#arr-req)"/>
+  <line class="link-req" href="#row-CS1502"
+        x1="255.0" y1="227.5" x2="788.3333333333334" y2="227.5"
+        marker-end="url(#arr-req)"/>
+  <line class="link-req" href="#row-MI2106"
+        x1="655.0" y1="397.5" x2="788.3333333333334" y2="363.5"
+        marker-end="url(#arr-req)"/>
+  <line class="link-req" href="#row-FI1102"
+        x1="521.6666666666666" y1="227.5" x2="788.3333333333334" y2="431.5"
+        marker-end="url(#arr-req)"/>
+  <line class="link-req" href="#row-FI1202"
+        x1="521.6666666666666" y1="295.5" x2="788.3333333333334" y2="431.5"
+        marker-end="url(#arr-req)"/>
+  <line class="link-req" href="#row-MA1103"
+        x1="521.6666666666666" y1="363.5" x2="788.3333333333334" y2="499.5"
+        marker-end="url(#arr-req)"/>
+  <line class="link-correq" href="#row-CS2303"
+        x1="788.3333333333334" y1="227.5" x2="788.3333333333334" y2="567.5"
+        marker-end="url(#arr-correq)"/>
+  <line class="link-req" href="#row-PI2609"
+        x1="788.3333333333334" y1="499.5" x2="921.6666666666666" y2="125.5"
+        marker-end="url(#arr-req)"/>
+  <line class="link-req" href="#row-CM3103"
+        x1="655.0" y1="261.5" x2="921.6666666666666" y2="193.5"
+        marker-end="url(#arr-req)"/>
+  <line class="link-req" href="#row-MA2105"
+        x1="655.0" y1="329.5" x2="921.6666666666666" y2="193.5"
+        marker-end="url(#arr-req)"/>
+  <line class="link-req" href="#row-CM2401"
+        x1="655.0" y1="125.5" x2="921.6666666666666" y2="261.5"
+        marker-end="url(#arr-req)"/>
+  <line class="link-req" href="#row-CM3103"
+        x1="655.0" y1="261.5" x2="921.6666666666666" y2="261.5"
+        marker-end="url(#arr-req)"/>
+  <line class="link-req" href="#row-CM2401"
+        x1="655.0" y1="125.5" x2="921.6666666666666" y2="329.5"
+        marker-end="url(#arr-req)"/>
+  <line class="link-req" href="#row-MI3115"
+        x1="788.3333333333334" y1="363.5" x2="921.6666666666666" y2="329.5"
+        marker-end="url(#arr-req)"/>
+  <line class="link-req" href="#row-CM2401"
+        x1="655.0" y1="125.5" x2="921.6666666666666" y2="397.5"
+        marker-end="url(#arr-req)"/>
+  <line class="link-req" href="#row-CM3103"
+        x1="655.0" y1="261.5" x2="921.6666666666666" y2="397.5"
+        marker-end="url(#arr-req)"/>
+  <line class="link-correq" href="#row-CM3602"
+        x1="921.6666666666666" y1="261.5" x2="921.6666666666666" y2="397.5"
+        marker-end="url(#arr-correq)"/>
+  <line class="link-req" href="#row-CM3501"
+        x1="788.3333333333334" y1="159.5" x2="921.6666666666666" y2="465.5"
+        marker-end="url(#arr-req)"/>
+  <line class="link-req" href="#row-CS1502"
+        x1="255.0" y1="227.5" x2="921.6666666666666" y2="533.5"
+        marker-end="url(#arr-req)"/>
+  <line class="link-req" href="#row-PI2609"
+        x1="788.3333333333334" y1="499.5" x2="1055.0" y2="159.5"
+        marker-end="url(#arr-req)"/>
+  <line class="link-req" href="#row-CM3208"
+        x1="921.6666666666666" y1="125.5" x2="1055.0" y2="227.5"
+        marker-end="url(#arr-req)"/>
+  <line class="link-req" href="#row-CM3602"
+        x1="921.6666666666666" y1="261.5" x2="1055.0" y2="227.5"
+        marker-end="url(#arr-req)"/>
+  <line class="link-req" href="#row-CM3603"
+        x1="921.6666666666666" y1="329.5" x2="1055.0" y2="295.5"
+        marker-end="url(#arr-req)"/>
+  <line class="link-req" href="#row-CM3207"
+        x1="788.3333333333334" y1="91.5" x2="1055.0" y2="363.5"
+        marker-end="url(#arr-req)"/>
+  <line class="link-req" href="#row-CM3601"
+        x1="921.6666666666666" y1="193.5" x2="1055.0" y2="363.5"
+        marker-end="url(#arr-req)"/>
+  <line class="link-req" href="#row-CM2401"
+        x1="655.0" y1="125.5" x2="1055.0" y2="431.5"
+        marker-end="url(#arr-req)"/>
+  <line class="link-req" href="#row-CM4305"
+        x1="921.6666666666666" y1="465.5" x2="1055.0" y2="431.5"
+        marker-end="url(#arr-req)"/>
+  <line class="link-req" href="#row-CS3404"
+        x1="921.6666666666666" y1="533.5" x2="1055.0" y2="499.5"
+        marker-end="url(#arr-req)"/>
+  <line class="link-req" href="#row-CM3603"
+        x1="921.6666666666666" y1="329.5" x2="1188.3333333333335" y2="227.5"
+        marker-end="url(#arr-req)"/>
+  <line class="link-req" href="#row-CM4701"
+        x1="1055.0" y1="363.5" x2="1188.3333333333335" y2="227.5"
+        marker-end="url(#arr-req)"/>
+  <line class="link-req" href="#row-CM4305"
+        x1="921.6666666666666" y1="465.5" x2="1188.3333333333335" y2="295.5"
+        marker-end="url(#arr-req)"/>
+  <line class="link-req" href="#row-CM4702"
+        x1="1055.0" y1="431.5" x2="1188.3333333333335" y2="295.5"
+        marker-end="url(#arr-req)"/>
+  <line class="link-req" href="#row-AE5121"
+        x1="1055.0" y1="159.5" x2="1188.3333333333335" y2="363.5"
+        marker-end="url(#arr-req)"/>
+  <line class="link-correq" href="#row-CM4101"
+        x1="1188.3333333333335" y1="227.5" x2="1188.3333333333335" y2="431.5"
+        marker-end="url(#arr-correq)"/>
+  <line class="link-correq" href="#row-CM4802"
+        x1="1188.3333333333335" y1="363.5" x2="1188.3333333333335" y2="431.5"
+        marker-end="url(#arr-correq)"/>
+
+  <!-- ── Nodos ──────────────────────────────────────────────────────────── -->
+  <circle id="node-CI0200" href="#row-CI0200"
+          cx="121.66666666666667" cy="295.5" r="10"
+          fill="#6a3d9a" stroke="white" stroke-width="1.0"
+          opacity="0.92"/>
+  <text class="node-lbl" x="121.66666666666667" y="295.5">CI0200</text>
+  <circle id="node-CI0202" href="#row-CI0202"
+          cx="121.66666666666667" cy="363.5" r="14"
+          fill="#6a3d9a" stroke="white" stroke-width="1.6"
+          opacity="0.92"/>
+  <text class="node-lbl" x="121.66666666666667" y="363.5">CI0202</text>
+  <circle id="node-CI1106" href="#row-CI1106"
+          cx="255.0" cy="91.5" r="14"
+          fill="#6a3d9a" stroke="white" stroke-width="2.2"
+          opacity="0.92"/>
+  <text class="node-lbl" x="255.0" y="91.5">CI1106</text>
+  <circle id="node-CM1103" href="#row-CM1103"
+          cx="255.0" cy="159.5" r="16"
+          fill="#1f78b4" stroke="white" stroke-width="2.6"
+          opacity="0.92"/>
+  <text class="node-lbl" x="255.0" y="159.5">CM1103</text>
+  <circle id="node-CS1502" href="#row-CS1502"
+          cx="255.0" cy="227.5" r="12"
+          fill="#fb9a99" stroke="white" stroke-width="1.4"
+          opacity="0.92"/>
+  <text class="node-lbl" x="255.0" y="227.5">CS1502</text>
+  <circle id="node-MA0101" href="#row-MA0101"
+          cx="255.0" cy="295.5" r="14"
+          fill="#33a02c" stroke="white" stroke-width="2.0"
+          opacity="0.92"/>
+  <text class="node-lbl" x="255.0" y="295.5">MA0101</text>
+  <circle id="node-MI2101" href="#row-MI2101"
+          cx="255.0" cy="363.5" r="16"
+          fill="#756bb1" stroke="white" stroke-width="2.8"
+          opacity="0.92"/>
+  <text class="node-lbl" x="255.0" y="363.5">MI2101</text>
+  <circle id="node-QU1102" href="#row-QU1102"
+          cx="255.0" cy="431.5" r="12"
+          fill="#ff7f00" stroke="white" stroke-width="1.4"
+          opacity="0.92"/>
+  <text class="node-lbl" x="255.0" y="431.5">QU1102</text>
+  <circle id="node-QU1106" href="#row-QU1106"
+          cx="255.0" cy="499.5" r="16"
+          fill="#ff7f00" stroke="white" stroke-width="1.8"
+          opacity="0.92"/>
+  <text class="node-lbl" x="255.0" y="499.5">QU1106</text>
+  <circle id="node-SE1100" href="#row-SE1100"
+          cx="255.0" cy="567.5" r="10"
+          fill="#fdb462" stroke="white" stroke-width="1.4"
+          opacity="0.92"/>
+  <text class="node-lbl" x="255.0" y="567.5">SE1100</text>
+  <circle id="node-CA2125" href="#row-CA2125"
+          cx="388.33333333333337" cy="91.5" r="16"
+          fill="#6a3d9a" stroke="white" stroke-width="1.8"
+          opacity="0.92"/>
+  <text class="node-lbl" x="388.33333333333337" y="91.5">CA2125</text>
+  <circle id="node-CI1107" href="#row-CI1107"
+          cx="388.33333333333337" cy="159.5" r="12"
+          fill="#6a3d9a" stroke="white" stroke-width="1.6"
+          opacity="0.92"/>
+  <text class="node-lbl" x="388.33333333333337" y="159.5">CI1107</text>
+  <circle id="node-CI1230" href="#row-CI1230"
+          cx="388.33333333333337" cy="227.5" r="14"
+          fill="#6a3d9a" stroke="white" stroke-width="2.2"
+          opacity="0.92"/>
+  <text class="node-lbl" x="388.33333333333337" y="227.5">CI1230</text>
+  <circle id="node-FI1101" href="#row-FI1101"
+          cx="388.33333333333337" cy="295.5" r="16"
+          fill="#e31a1c" stroke="white" stroke-width="1.8"
+          opacity="0.92"/>
+  <text class="node-lbl" x="388.33333333333337" y="295.5">FI1101</text>
+  <circle id="node-FI1201" href="#row-FI1201"
+          cx="388.33333333333337" cy="363.5" r="12"
+          fill="#e31a1c" stroke="white" stroke-width="1.4"
+          opacity="0.92"/>
+  <text class="node-lbl" x="388.33333333333337" y="363.5">FI1201</text>
+  <circle id="node-MA1102" href="#row-MA1102"
+          cx="388.33333333333337" cy="431.5" r="18"
+          fill="#33a02c" stroke="white" stroke-width="2.0"
+          opacity="0.92"/>
+  <text class="node-lbl" x="388.33333333333337" y="431.5">MA1102</text>
+  <circle id="node-QU1104" href="#row-QU1104"
+          cx="388.33333333333337" cy="499.5" r="12"
+          fill="#ff7f00" stroke="white" stroke-width="1.4"
+          opacity="0.92"/>
+  <text class="node-lbl" x="388.33333333333337" y="499.5">QU1104</text>
+  <circle id="node-QU1107" href="#row-QU1107"
+          cx="388.33333333333337" cy="567.5" r="16"
+          fill="#ff7f00" stroke="white" stroke-width="1.8"
+          opacity="0.92"/>
+  <text class="node-lbl" x="388.33333333333337" y="567.5">QU1107</text>
+  <circle id="node-CI1231" href="#row-CI1231"
+          cx="521.6666666666666" cy="91.5" r="14"
+          fill="#6a3d9a" stroke="white" stroke-width="1.6"
+          opacity="0.92"/>
+  <text class="node-lbl" x="521.6666666666666" y="91.5">CI1231</text>
+  <circle id="node-CM2103" href="#row-CM2103"
+          cx="521.6666666666666" cy="159.5" r="16"
+          fill="#1f78b4" stroke="white" stroke-width="1.8"
+          opacity="0.92"/>
+  <text class="node-lbl" x="521.6666666666666" y="159.5">CM2103</text>
+  <circle id="node-FI1102" href="#row-FI1102"
+          cx="521.6666666666666" cy="227.5" r="16"
+          fill="#e31a1c" stroke="white" stroke-width="1.8"
+          opacity="0.92"/>
+  <text class="node-lbl" x="521.6666666666666" y="227.5">FI1102</text>
+  <circle id="node-FI1202" href="#row-FI1202"
+          cx="521.6666666666666" cy="295.5" r="12"
+          fill="#e31a1c" stroke="white" stroke-width="1.4"
+          opacity="0.92"/>
+  <text class="node-lbl" x="521.6666666666666" y="295.5">FI1202</text>
+  <circle id="node-MA1103" href="#row-MA1103"
+          cx="521.6666666666666" cy="363.5" r="18"
+          fill="#33a02c" stroke="white" stroke-width="1.8"
+          opacity="0.92"/>
+  <text class="node-lbl" x="521.6666666666666" y="363.5">MA1103</text>
+  <circle id="node-QU2403" href="#row-QU2403"
+          cx="521.6666666666666" cy="431.5" r="16"
+          fill="#ff7f00" stroke="white" stroke-width="1.8"
+          opacity="0.92"/>
+  <text class="node-lbl" x="521.6666666666666" y="431.5">QU2403</text>
+  <circle id="node-QU2404" href="#row-QU2404"
+          cx="521.6666666666666" cy="499.5" r="14"
+          fill="#ff7f00" stroke="white" stroke-width="1.8"
+          opacity="0.92"/>
+  <text class="node-lbl" x="521.6666666666666" y="499.5">QU2404</text>
+  <circle id="node-SE1200" href="#row-SE1200"
+          cx="521.6666666666666" cy="567.5" r="10"
+          fill="#fdb462" stroke="white" stroke-width="1.4"
+          opacity="0.92"/>
+  <text class="node-lbl" x="521.6666666666666" y="567.5">SE1200</text>
+  <circle id="node-CM2401" href="#row-CM2401"
+          cx="655.0" cy="125.5" r="16"
+          fill="#1f78b4" stroke="white" stroke-width="2.8"
+          opacity="0.92"/>
+  <text class="node-lbl" x="655.0" y="125.5">CM2401</text>
+  <circle id="node-CM2402" href="#row-CM2402"
+          cx="655.0" cy="193.5" r="12"
+          fill="#1f78b4" stroke="white" stroke-width="1.6"
+          opacity="0.92"/>
+  <text class="node-lbl" x="655.0" y="193.5">CM2402</text>
+  <circle id="node-CM3103" href="#row-CM3103"
+          cx="655.0" cy="261.5" r="16"
+          fill="#1f78b4" stroke="white" stroke-width="1.8"
+          opacity="0.92"/>
+  <text class="node-lbl" x="655.0" y="261.5">CM3103</text>
+  <circle id="node-MA2105" href="#row-MA2105"
+          cx="655.0" cy="329.5" r="18"
+          fill="#33a02c" stroke="white" stroke-width="1.8"
+          opacity="0.92"/>
+  <text class="node-lbl" x="655.0" y="329.5">MA2105</text>
+  <circle id="node-MI2106" href="#row-MI2106"
+          cx="655.0" cy="397.5" r="16"
+          fill="#756bb1" stroke="white" stroke-width="1.8"
+          opacity="0.92"/>
+  <text class="node-lbl" x="655.0" y="397.5">MI2106</text>
+  <circle id="node-MI3124" href="#row-MI3124"
+          cx="655.0" cy="465.5" r="18"
+          fill="#756bb1" stroke="white" stroke-width="1.8"
+          opacity="0.92"/>
+  <text class="node-lbl" x="655.0" y="465.5">MI3124</text>
+  <circle id="node-SE1400" href="#row-SE1400"
+          cx="655.0" cy="533.5" r="10"
+          fill="#fdb462" stroke="white" stroke-width="1.4"
+          opacity="0.92"/>
+  <text class="node-lbl" x="655.0" y="533.5">SE1400</text>
+  <circle id="node-CM3207" href="#row-CM3207"
+          cx="788.3333333333334" cy="91.5" r="16"
+          fill="#1f78b4" stroke="white" stroke-width="1.8"
+          opacity="0.92"/>
+  <text class="node-lbl" x="788.3333333333334" y="91.5">CM3207</text>
+  <circle id="node-CM3501" href="#row-CM3501"
+          cx="788.3333333333334" cy="159.5" r="16"
+          fill="#1f78b4" stroke="white" stroke-width="2.8"
+          opacity="0.92"/>
+  <text class="node-lbl" x="788.3333333333334" y="159.5">CM3501</text>
+  <circle id="node-CS2303" href="#row-CS2303"
+          cx="788.3333333333334" cy="227.5" r="14"
+          fill="#fb9a99" stroke="white" stroke-width="2.2"
+          opacity="0.92"/>
+  <text class="node-lbl" x="788.3333333333334" y="227.5">CS2303</text>
+  <circle id="node-FH1000" href="#row-FH1000"
+          cx="788.3333333333334" cy="295.5" r="10"
+          fill="#4dac26" stroke="white" stroke-width="1.4"
+          opacity="0.92"/>
+  <text class="node-lbl" x="788.3333333333334" y="295.5">FH1000</text>
+  <circle id="node-MI3115" href="#row-MI3115"
+          cx="788.3333333333334" cy="363.5" r="16"
+          fill="#756bb1" stroke="white" stroke-width="1.8"
+          opacity="0.92"/>
+  <text class="node-lbl" x="788.3333333333334" y="363.5">MI3115</text>
+  <circle id="node-MI4510" href="#row-MI4510"
+          cx="788.3333333333334" cy="431.5" r="16"
+          fill="#756bb1" stroke="white" stroke-width="1.8"
+          opacity="0.92"/>
+  <text class="node-lbl" x="788.3333333333334" y="431.5">MI4510</text>
+  <circle id="node-PI2609" href="#row-PI2609"
+          cx="788.3333333333334" cy="499.5" r="14"
+          fill="#888888" stroke="white" stroke-width="1.6"
+          opacity="0.92"/>
+  <text class="node-lbl" x="788.3333333333334" y="499.5">PI2609</text>
+  <circle id="node-SO2601" href="#row-SO2601"
+          cx="788.3333333333334" cy="567.5" r="12"
+          fill="#888888" stroke="white" stroke-width="1.4"
+          opacity="0.92"/>
+  <text class="node-lbl" x="788.3333333333334" y="567.5">SO2601</text>
+  <circle id="node-CM3208" href="#row-CM3208"
+          cx="921.6666666666666" cy="125.5" r="16"
+          fill="#1f78b4" stroke="white" stroke-width="1.8"
+          opacity="0.92"/>
+  <text class="node-lbl" x="921.6666666666666" y="125.5">CM3208</text>
+  <circle id="node-CM3601" href="#row-CM3601"
+          cx="921.6666666666666" cy="193.5" r="16"
+          fill="#1f78b4" stroke="white" stroke-width="2.8"
+          opacity="0.92"/>
+  <text class="node-lbl" x="921.6666666666666" y="193.5">CM3601</text>
+  <circle id="node-CM3602" href="#row-CM3602"
+          cx="921.6666666666666" cy="261.5" r="16"
+          fill="#1f78b4" stroke="white" stroke-width="2.8"
+          opacity="0.92"/>
+  <text class="node-lbl" x="921.6666666666666" y="261.5">CM3602</text>
+  <circle id="node-CM3603" href="#row-CM3603"
+          cx="921.6666666666666" cy="329.5" r="16"
+          fill="#1f78b4" stroke="white" stroke-width="2.8"
+          opacity="0.92"/>
+  <text class="node-lbl" x="921.6666666666666" y="329.5">CM3603</text>
+  <circle id="node-CM4202" href="#row-CM4202"
+          cx="921.6666666666666" cy="397.5" r="14"
+          fill="#1f78b4" stroke="white" stroke-width="1.6"
+          opacity="0.92"/>
+  <text class="node-lbl" x="921.6666666666666" y="397.5">CM4202</text>
+  <circle id="node-CM4305" href="#row-CM4305"
+          cx="921.6666666666666" cy="465.5" r="14"
+          fill="#1f78b4" stroke="white" stroke-width="1.6"
+          opacity="0.92"/>
+  <text class="node-lbl" x="921.6666666666666" y="465.5">CM4305</text>
+  <circle id="node-CS3404" href="#row-CS3404"
+          cx="921.6666666666666" cy="533.5" r="14"
+          fill="#fb9a99" stroke="white" stroke-width="2.0"
+          opacity="0.92"/>
+  <text class="node-lbl" x="921.6666666666666" y="533.5">CS3404</text>
+  <circle id="node-AE5121" href="#row-AE5121"
+          cx="1055.0" cy="159.5" r="16"
+          fill="#a6761d" stroke="white" stroke-width="1.6"
+          opacity="0.92"/>
+  <text class="node-lbl" x="1055.0" y="159.5">AE5121</text>
+  <circle id="node-CM3205" href="#row-CM3205"
+          cx="1055.0" cy="227.5" r="16"
+          fill="#1f78b4" stroke="white" stroke-width="1.8"
+          opacity="0.92"/>
+  <text class="node-lbl" x="1055.0" y="227.5">CM3205</text>
+  <circle id="node-CM4307" href="#row-CM4307"
+          cx="1055.0" cy="295.5" r="18"
+          fill="#1f78b4" stroke="white" stroke-width="1.8"
+          opacity="0.92"/>
+  <text class="node-lbl" x="1055.0" y="295.5">CM4307</text>
+  <circle id="node-CM4701" href="#row-CM4701"
+          cx="1055.0" cy="363.5" r="16"
+          fill="#1f78b4" stroke="white" stroke-width="2.8"
+          opacity="0.92"/>
+  <text class="node-lbl" x="1055.0" y="363.5">CM4701</text>
+  <circle id="node-CM4702" href="#row-CM4702"
+          cx="1055.0" cy="431.5" r="16"
+          fill="#1f78b4" stroke="white" stroke-width="2.8"
+          opacity="0.92"/>
+  <text class="node-lbl" x="1055.0" y="431.5">CM4702</text>
+  <circle id="node-CS4402" href="#row-CS4402"
+          cx="1055.0" cy="499.5" r="14"
+          fill="#fb9a99" stroke="white" stroke-width="1.6"
+          opacity="0.92"/>
+  <text class="node-lbl" x="1055.0" y="499.5">CS4402</text>
+  <circle id="node-CM4101" href="#row-CM4101"
+          cx="1188.3333333333335" cy="227.5" r="18"
+          fill="#1f78b4" stroke="white" stroke-width="1.8"
+          opacity="0.92"/>
+  <text class="node-lbl" x="1188.3333333333335" y="227.5">CM4101</text>
+  <circle id="node-CM4801" href="#row-CM4801"
+          cx="1188.3333333333335" cy="295.5" r="18"
+          fill="#1f78b4" stroke="white" stroke-width="1.8"
+          opacity="0.92"/>
+  <text class="node-lbl" x="1188.3333333333335" y="295.5">CM4801</text>
+  <circle id="node-CM4802" href="#row-CM4802"
+          cx="1188.3333333333335" cy="363.5" r="16"
+          fill="#1f78b4" stroke="white" stroke-width="2.8"
+          opacity="0.92"/>
+  <text class="node-lbl" x="1188.3333333333335" y="363.5">CM4802</text>
+  <circle id="node-CM4803" href="#row-CM4803"
+          cx="1188.3333333333335" cy="431.5" r="24"
+          fill="#1f78b4" stroke="white" stroke-width="5.2"
+          opacity="0.92"/>
+  <text class="node-lbl" x="1188.3333333333335" y="431.5">CM4803</text>
+
+  <!-- ── Leyenda ────────────────────────────────────────────────────────── -->
+
+  <!-- Área → color -->
+  <text class="leg-hdr" x="1273" y="90">Área (color)</text>
+  <rect x="1273"      y="98"  width="12" height="12" fill="#1f78b4" rx="2"/>
+  <text class="leg-txt" x="1289" y="109">Ciencia de Materiales</text>
+  <rect x="1273"      y="114" width="12" height="12" fill="#e31a1c" rx="2"/>
+  <text class="leg-txt" x="1289" y="125">Física</text>
+  <rect x="1273"      y="130" width="12" height="12" fill="#33a02c" rx="2"/>
+  <text class="leg-txt" x="1289" y="141">Matemáticas</text>
+  <rect x="1273"      y="146" width="12" height="12" fill="#ff7f00" rx="2"/>
+  <text class="leg-txt" x="1289" y="157">Química</text>
+  <rect x="1273"      y="162" width="12" height="12" fill="#6a3d9a" rx="2"/>
+  <text class="leg-txt" x="1289" y="173">Ciencias Básicas</text>
+  <rect x="1273"      y="178" width="12" height="12" fill="#fb9a99" rx="2"/>
+  <text class="leg-txt" x="1289" y="189">Ciencias Sociales</text>
+  <rect x="1273"      y="194" width="12" height="12" fill="#a6761d" rx="2"/>
+  <text class="leg-txt" x="1289" y="205">Adm. e Ingeniería</text>
+  <rect x="1273"      y="210" width="12" height="12" fill="#4dac26" rx="2"/>
+  <text class="leg-txt" x="1289" y="221">Form. Humanística</text>
+  <rect x="1273"      y="226" width="12" height="12" fill="#756bb1" rx="2"/>
+  <text class="leg-txt" x="1289" y="237">Ing. Mecánica</text>
+  <rect x="1273"      y="242" width="12" height="12" fill="#fdb462" rx="2"/>
+  <text class="leg-txt" x="1289" y="253">Deportes y Cultura</text>
+  <rect x="1273"      y="258" width="12" height="12" fill="#888888" rx="2"/>
+  <text class="leg-txt" x="1289" y="269">General</text>
+
+  <!-- Créditos → tamaño -->
+  <text class="leg-hdr" x="1273" y="292">Créditos (tamaño)</text>
+  <circle cx="1279"  cy="310" r="10" fill="#aaa"/>
+  <text class="leg-txt" x="1289" y="314">0 cr</text>
+  <circle cx="1279"  cy="330" r="16" fill="#aaa"/>
+  <text class="leg-txt" x="1289" y="334">3 cr</text>
+  <circle cx="1279"  cy="354" r="24" fill="#aaa"/>
+  <text class="leg-txt" x="1289" y="358">7 cr</text>
+
+  <!-- Horas → grosor borde -->
+  <text class="leg-hdr" x="1273" y="385">Horas (borde)</text>
+  <circle cx="1283" cy="402" r="9" fill="none" stroke="#555" stroke-width="1"/>
+  <text class="leg-txt" x="1297" y="406">Pocas horas</text>
+  <circle cx="1283" cy="422" r="9" fill="none" stroke="#555" stroke-width="4"/>
+  <text class="leg-txt" x="1297" y="426">Muchas horas</text>
+
+  <!-- Tipo de enlace -->
+  <text class="leg-hdr" x="1273" y="450">Tipo de enlace</text>
+  <line x1="1273"      y1="465" x2="1308" y2="465"
+        class="link-req" marker-end="url(#arr-req)"/>
+  <text class="leg-txt" x="1312" y="469">Requisito</text>
+  <line x1="1273"      y1="483" x2="1308" y2="483"
+        class="link-correq" marker-end="url(#arr-correq)"/>
+  <text class="leg-txt" x="1312" y="487">Correquisito</text>
+
+</svg>

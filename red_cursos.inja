@@ -1,0 +1,199 @@
+{# ─── Dimensiones y márgenes ─────────────────────────────────────────── #}
+{% set padL   = 55  %}
+{% set padT   = 90  %}
+{% set padR   = 235 %}
+{% set padB   = 45  %}
+{% set totalW = 1490 %}
+{% set totalH = 750  %}
+{% set chartW = totalW - padL - padR %}
+{% set chartH = totalH - padT - padB %}
+
+{# 9 columnas: semestres 0..8 #}
+{% set numSem = 9   %}
+{% set colW   = chartW / numSem %}
+{% set rowH   = 68  %}
+
+{# Rango de créditos → radio del nodo #}
+{% set minR  = 10 %}
+{% set scaleR = 2  %}
+
+{# ─── Construir tabla de posiciones (una por nodo) ────────────────────── #}
+{% set positions = [] %}
+{% set groups = nodos | regroup("semestre") %}
+{% for g in groups %}
+{% set sem = g.grouper %}
+{% set scx = padL + sem * colW + colW / 2 %}
+{% set cnt = g.list | length %}
+{% for n in g.list %}
+{% set ix  = loop.index %}
+{% set scy = padT + (chartH - cnt * rowH) / 2 + ix * rowH - rowH / 2 %}
+{% set r   = minR + n.creditos * scaleR %}
+{% set sw  = 1 + n.horas / 5 %}
+
+{# Área → color de relleno (un if independiente por área) #}
+{% set nc = "#888888" %}
+{% if n.area == "Ciencia de Materiales" %}{% set nc = "#1f78b4" %}{% endif %}
+{% if n.area == "Física" %}{% set nc = "#e31a1c" %}{% endif %}
+{% if n.area == "Matemáticas" %}{% set nc = "#33a02c" %}{% endif %}
+{% if n.area == "Química" %}{% set nc = "#ff7f00" %}{% endif %}
+{% if n.area == "Ciencias Básicas" %}{% set nc = "#6a3d9a" %}{% endif %}
+{% if n.area == "Ciencias Sociales" %}{% set nc = "#fb9a99" %}{% endif %}
+{% if n.area == "Administración e Ingeniería" %}{% set nc = "#a6761d" %}{% endif %}
+{% if n.area == "Formación Humanística" %}{% set nc = "#4dac26" %}{% endif %}
+{% if n.area == "Ingeniería Mecánica" %}{% set nc = "#756bb1" %}{% endif %}
+{% if n.area == "Deportes y Cultura" %}{% set nc = "#fdb462" %}{% endif %}
+
+{% set positions = positions | append(obj("sigla", n.sigla, "cx", scx, "cy", scy, "r", r, "sw", sw, "color", nc, "area", n.area, "nombre", n.nombre, "sem", sem, "creditos", n.creditos, "horas", n.horas)) %}
+{% endfor %}
+{% endfor %}
+
+<svg width="{{totalW}}" height="{{totalH}}"
+     xmlns="http://www.w3.org/2000/svg"
+     xmlns:v="https://odviz.org/1.0/">
+
+  <!-- ── ODViz: tabla de datos incrustada ──────────────────────────────── -->
+  <metadata>
+    <v:table name="plan_materiales"
+             description="Plan de Estudios - Ingeniería en Materiales (TEC, Plan 1217)"
+             visualization="chart"
+             columns="id,nombre,sigla,semestre,creditos,horas,area">
+      {% for n in nodos %}
+      <v:row id="row-{{n.sigla}}" hrefs="node-{{n.sigla}}">{{n.sigla}},{{n.nombre}},{{n.sigla}},{{n.semestre}},{{n.creditos}},{{n.horas}},{{n.area}}</v:row>
+      {% endfor %}
+    </v:table>
+  </metadata>
+
+  <style>
+    .titulo     { font-family: sans-serif; font-size: 15px; font-weight: bold; fill: #111; }
+    .subtitulo  { font-family: sans-serif; font-size: 10px; fill: #666; }
+    .sem-lbl    { font-family: sans-serif; font-size: 11px; font-weight: bold; fill: #444; }
+    .node-lbl   { font-family: sans-serif; font-size: 8px; fill: #fff; text-anchor: middle;
+                  dominant-baseline: middle; pointer-events: none; font-weight: bold; }
+    .leg-hdr    { font-family: sans-serif; font-size: 10px; font-weight: bold; fill: #222; }
+    .leg-txt    { font-family: sans-serif; font-size: 9px; fill: #333; }
+    .link-req   { stroke: #555; stroke-width: 1.2; fill: none; opacity: 0.45; }
+    .link-correq{ stroke: #d94701; stroke-width: 1.8; fill: none; opacity: 0.55;
+                  stroke-dasharray: 6,3; }
+  </style>
+
+  <defs>
+    <marker id="arr-req" markerWidth="7" markerHeight="5"
+            refX="6" refY="2.5" orient="auto" markerUnits="strokeWidth">
+      <polygon points="0 0, 7 2.5, 0 5" fill="#555" opacity="0.6"/>
+    </marker>
+    <marker id="arr-correq" markerWidth="7" markerHeight="5"
+            refX="6" refY="2.5" orient="auto" markerUnits="strokeWidth">
+      <polygon points="0 0, 7 2.5, 0 5" fill="#d94701" opacity="0.7"/>
+    </marker>
+  </defs>
+
+  <!-- ── Título ─────────────────────────────────────────────────────────── -->
+  <text class="titulo" x="{{totalW / 2}}" y="28" text-anchor="middle">
+    Red de Cursos — Ingeniería en Materiales (TEC, Plan 1217)
+  </text>
+  <text class="subtitulo" x="{{totalW / 2}}" y="46" text-anchor="middle">
+    Color: Área  |  Tamaño nodo: Créditos  |  Grosor borde: Horas  |  Línea sólida: Requisito  |  Línea punteada: Correquisito
+  </text>
+
+  <!-- ── Franjas de columna (semestres) ────────────────────────────────── -->
+  {% for g in groups %}
+  {% set sem = g.grouper %}
+  {% set bx  = padL + sem * colW %}
+  {% if isEven(sem) %}
+  <rect x="{{bx}}" y="{{padT - 28}}" width="{{colW}}" height="{{chartH + 28}}"
+        fill="#f4f4f4" opacity="0.7"/>
+  {% endif %}
+  <line x1="{{bx}}" y1="{{padT - 28}}" x2="{{bx}}" y2="{{padT + chartH}}"
+        stroke="#d0d0d0" stroke-width="0.8"/>
+  <text class="sem-lbl" x="{{bx + colW / 2}}" y="{{padT - 10}}" text-anchor="middle">
+    {% if sem == 0 %}Prev.{% else %}Sem {{sem}}{% endif %}
+  </text>
+  {% endfor %}
+  <line x1="{{padL + chartW}}" y1="{{padT - 28}}" x2="{{padL + chartW}}" y2="{{padT + chartH}}"
+        stroke="#d0d0d0" stroke-width="0.8"/>
+
+  <!-- ── Línea base inferior ───────────────────────────────────────────── -->
+  <line x1="{{padL}}" y1="{{padT + chartH}}" x2="{{padL + chartW}}" y2="{{padT + chartH}}"
+        stroke="#ccc" stroke-width="0.8"/>
+
+  <!-- ── Enlaces (dibujados primero, detrás de los nodos) ──────────────── -->
+  {% for enlace in enlaces %}
+  {% for sp in positions | selectattr("sigla", "equalto", enlace.fuente) %}
+  {% for dp in positions | selectattr("sigla", "equalto", enlace.destino) %}
+  {% if enlace.tipo == "correquisito" %}
+  <line class="link-correq" href="#row-{{enlace.fuente}}"
+        x1="{{sp.cx}}" y1="{{sp.cy}}" x2="{{dp.cx}}" y2="{{dp.cy}}"
+        marker-end="url(#arr-correq)"/>
+  {% else %}
+  <line class="link-req" href="#row-{{enlace.fuente}}"
+        x1="{{sp.cx}}" y1="{{sp.cy}}" x2="{{dp.cx}}" y2="{{dp.cy}}"
+        marker-end="url(#arr-req)"/>
+  {% endif %}
+  {% endfor %}
+  {% endfor %}
+  {% endfor %}
+
+  <!-- ── Nodos ──────────────────────────────────────────────────────────── -->
+  {% for pos in positions %}
+  <circle id="node-{{pos.sigla}}" href="#row-{{pos.sigla}}"
+          cx="{{pos.cx}}" cy="{{pos.cy}}" r="{{pos.r}}"
+          fill="{{pos.color}}" stroke="white" stroke-width="{{pos.sw}}"
+          opacity="0.92"/>
+  <text class="node-lbl" x="{{pos.cx}}" y="{{pos.cy}}">{{pos.sigla}}</text>
+  {% endfor %}
+
+  <!-- ── Leyenda ────────────────────────────────────────────────────────── -->
+  {% set lx = padL + chartW + 18 %}
+  {% set ly = padT %}
+
+  <!-- Área → color -->
+  <text class="leg-hdr" x="{{lx}}" y="{{ly}}">Área (color)</text>
+  <rect x="{{lx}}"      y="{{ly + 8}}"  width="12" height="12" fill="#1f78b4" rx="2"/>
+  <text class="leg-txt" x="{{lx + 16}}" y="{{ly + 19}}">Ciencia de Materiales</text>
+  <rect x="{{lx}}"      y="{{ly + 24}}" width="12" height="12" fill="#e31a1c" rx="2"/>
+  <text class="leg-txt" x="{{lx + 16}}" y="{{ly + 35}}">Física</text>
+  <rect x="{{lx}}"      y="{{ly + 40}}" width="12" height="12" fill="#33a02c" rx="2"/>
+  <text class="leg-txt" x="{{lx + 16}}" y="{{ly + 51}}">Matemáticas</text>
+  <rect x="{{lx}}"      y="{{ly + 56}}" width="12" height="12" fill="#ff7f00" rx="2"/>
+  <text class="leg-txt" x="{{lx + 16}}" y="{{ly + 67}}">Química</text>
+  <rect x="{{lx}}"      y="{{ly + 72}}" width="12" height="12" fill="#6a3d9a" rx="2"/>
+  <text class="leg-txt" x="{{lx + 16}}" y="{{ly + 83}}">Ciencias Básicas</text>
+  <rect x="{{lx}}"      y="{{ly + 88}}" width="12" height="12" fill="#fb9a99" rx="2"/>
+  <text class="leg-txt" x="{{lx + 16}}" y="{{ly + 99}}">Ciencias Sociales</text>
+  <rect x="{{lx}}"      y="{{ly + 104}}" width="12" height="12" fill="#a6761d" rx="2"/>
+  <text class="leg-txt" x="{{lx + 16}}" y="{{ly + 115}}">Adm. e Ingeniería</text>
+  <rect x="{{lx}}"      y="{{ly + 120}}" width="12" height="12" fill="#4dac26" rx="2"/>
+  <text class="leg-txt" x="{{lx + 16}}" y="{{ly + 131}}">Form. Humanística</text>
+  <rect x="{{lx}}"      y="{{ly + 136}}" width="12" height="12" fill="#756bb1" rx="2"/>
+  <text class="leg-txt" x="{{lx + 16}}" y="{{ly + 147}}">Ing. Mecánica</text>
+  <rect x="{{lx}}"      y="{{ly + 152}}" width="12" height="12" fill="#fdb462" rx="2"/>
+  <text class="leg-txt" x="{{lx + 16}}" y="{{ly + 163}}">Deportes y Cultura</text>
+  <rect x="{{lx}}"      y="{{ly + 168}}" width="12" height="12" fill="#888888" rx="2"/>
+  <text class="leg-txt" x="{{lx + 16}}" y="{{ly + 179}}">General</text>
+
+  <!-- Créditos → tamaño -->
+  <text class="leg-hdr" x="{{lx}}" y="{{ly + 202}}">Créditos (tamaño)</text>
+  <circle cx="{{lx + 6}}"  cy="{{ly + 220}}" r="{{minR + 0 * scaleR}}" fill="#aaa"/>
+  <text class="leg-txt" x="{{lx + 16}}" y="{{ly + 224}}">0 cr</text>
+  <circle cx="{{lx + 6}}"  cy="{{ly + 240}}" r="{{minR + 3 * scaleR}}" fill="#aaa"/>
+  <text class="leg-txt" x="{{lx + 16}}" y="{{ly + 244}}">3 cr</text>
+  <circle cx="{{lx + 6}}"  cy="{{ly + 264}}" r="{{minR + 7 * scaleR}}" fill="#aaa"/>
+  <text class="leg-txt" x="{{lx + 16}}" y="{{ly + 268}}">7 cr</text>
+
+  <!-- Horas → grosor borde -->
+  <text class="leg-hdr" x="{{lx}}" y="{{ly + 295}}">Horas (borde)</text>
+  <circle cx="{{lx + 10}}" cy="{{ly + 312}}" r="9" fill="none" stroke="#555" stroke-width="1"/>
+  <text class="leg-txt" x="{{lx + 24}}" y="{{ly + 316}}">Pocas horas</text>
+  <circle cx="{{lx + 10}}" cy="{{ly + 332}}" r="9" fill="none" stroke="#555" stroke-width="4"/>
+  <text class="leg-txt" x="{{lx + 24}}" y="{{ly + 336}}">Muchas horas</text>
+
+  <!-- Tipo de enlace -->
+  <text class="leg-hdr" x="{{lx}}" y="{{ly + 360}}">Tipo de enlace</text>
+  <line x1="{{lx}}"      y1="{{ly + 375}}" x2="{{lx + 35}}" y2="{{ly + 375}}"
+        class="link-req" marker-end="url(#arr-req)"/>
+  <text class="leg-txt" x="{{lx + 39}}" y="{{ly + 379}}">Requisito</text>
+  <line x1="{{lx}}"      y1="{{ly + 393}}" x2="{{lx + 35}}" y2="{{ly + 393}}"
+        class="link-correq" marker-end="url(#arr-correq)"/>
+  <text class="leg-txt" x="{{lx + 39}}" y="{{ly + 397}}">Correquisito</text>
+
+</svg>
