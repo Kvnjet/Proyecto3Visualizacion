@@ -135,10 +135,12 @@
   {% for dp in positions | selectattr("sigla", "equalto", enlace.destino) %}
   {% if enlace.tipo == "correquisito" %}
   <line class="link-correq" href="#row-{{enlace.fuente}}"
+        data-src="{{enlace.fuente}}" data-dest="{{enlace.destino}}"
         x1="{{sp.cx}}" y1="{{sp.cy}}" x2="{{dp.cx}}" y2="{{dp.cy}}"
         marker-end="url(#arr-correq)"/>
   {% else %}
   <line class="link-req" href="#row-{{enlace.fuente}}"
+        data-src="{{enlace.fuente}}" data-dest="{{enlace.destino}}"
         x1="{{sp.cx}}" y1="{{sp.cy}}" x2="{{dp.cx}}" y2="{{dp.cy}}"
         marker-end="url(#arr-req)"/>
   {% endif %}
@@ -215,7 +217,7 @@
            fill="{{pos.color}}" stroke="white" stroke-width="{{pos.sw}}" opacity="0.92"/>
   {% endif %}
 
-  <text class="node-lbl" x="{{cx}}" y="{{cy}}">{{pos.sigla}}</text>
+  <text id="lbl-{{pos.sigla}}" class="node-lbl" x="{{cx}}" y="{{cy}}">{{pos.sigla}}</text>
   {% endfor %}
 
   <!-- ── Leyenda ────────────────────────────────────────────────────────── -->
