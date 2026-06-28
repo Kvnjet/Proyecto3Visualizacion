@@ -193,7 +193,7 @@
     .titulo     { font-family: sans-serif; font-size: 15px; font-weight: bold; fill: #111; }
     .subtitulo  { font-family: sans-serif; font-size: 10px; fill: #666; }
     .sem-lbl    { font-family: sans-serif; font-size: 11px; font-weight: bold; fill: #444; }
-    .node-lbl   { font-family: sans-serif; font-size: 8px; fill: #fff; text-anchor: middle;
+    .node-lbl   { font-family: sans-serif; font-size: 8px; fill: #00072d; text-anchor: middle;
                   dominant-baseline: middle; pointer-events: none; font-weight: bold; }
     .leg-hdr    { font-family: sans-serif; font-size: 10px; font-weight: bold; fill: #222; }
     .leg-txt    { font-family: sans-serif; font-size: 9px; fill: #333; }
@@ -213,643 +213,1015 @@
     </marker>
   </defs>
 
+
+  <!-- ── Fondo blanco ──────────────────────────────────────────────────── -->
+  <rect x="0" y="0" width="1490" height="750" fill="white"/>
+
   <!-- ── Título ─────────────────────────────────────────────────────────── -->
   <text class="titulo" x="745.0" y="28" text-anchor="middle">
-    Red de Cursos — Ingeniería en Materiales (TEC, Plan 1217)
+   Ingeniería en Materiales [Plan 1217]
   </text>
-  <text class="subtitulo" x="745.0" y="46" text-anchor="middle">
-    Color: Área  |  Tamaño nodo: Créditos  |  Grosor borde: Horas  |  Línea sólida: Requisito  |  Línea punteada: Correquisito
-  </text>
+
+
+
 
   <!-- ── Franjas de columna (semestres) ────────────────────────────────── -->
   <rect x="55.0" y="62" width="133.33333333333334" height="643"
-        fill="#f4f4f4" opacity="0.7"/>
+        fill="#DDEEFA" opacity="0.7"/>
   <line x1="55.0" y1="62" x2="55.0" y2="705"
-        stroke="#d0d0d0" stroke-width="0.8"/>
+        stroke= "#6CAEED" stroke-width="0.8"/>
   <text class="sem-lbl" x="121.66666666666667" y="80" text-anchor="middle">
-Prev.  </text>
+Semestre 0  </text>
+  <rect x="188.33333333333334" y="62" width="133.33333333333334" height="643"
+        fill="#6CAEED" opacity="0.7"/>
   <line x1="188.33333333333334" y1="62" x2="188.33333333333334" y2="705"
-        stroke="#d0d0d0" stroke-width="0.8"/>
+        stroke= "#6CAEED" stroke-width="0.8"/>
   <text class="sem-lbl" x="255.0" y="80" text-anchor="middle">
-Sem 1  </text>
+Semestre 1  </text>
   <rect x="321.6666666666667" y="62" width="133.33333333333334" height="643"
-        fill="#f4f4f4" opacity="0.7"/>
+        fill="#DDEEFA" opacity="0.7"/>
   <line x1="321.6666666666667" y1="62" x2="321.6666666666667" y2="705"
-        stroke="#d0d0d0" stroke-width="0.8"/>
+        stroke= "#6CAEED" stroke-width="0.8"/>
   <text class="sem-lbl" x="388.33333333333337" y="80" text-anchor="middle">
-Sem 2  </text>
+Semestre 2  </text>
+  <rect x="455.0" y="62" width="133.33333333333334" height="643"
+        fill="#6CAEED" opacity="0.7"/>
   <line x1="455.0" y1="62" x2="455.0" y2="705"
-        stroke="#d0d0d0" stroke-width="0.8"/>
+        stroke= "#6CAEED" stroke-width="0.8"/>
   <text class="sem-lbl" x="521.6666666666666" y="80" text-anchor="middle">
-Sem 3  </text>
+Semestre 3  </text>
   <rect x="588.3333333333334" y="62" width="133.33333333333334" height="643"
-        fill="#f4f4f4" opacity="0.7"/>
+        fill="#DDEEFA" opacity="0.7"/>
   <line x1="588.3333333333334" y1="62" x2="588.3333333333334" y2="705"
-        stroke="#d0d0d0" stroke-width="0.8"/>
+        stroke= "#6CAEED" stroke-width="0.8"/>
   <text class="sem-lbl" x="655.0" y="80" text-anchor="middle">
-Sem 4  </text>
+Semestre 4  </text>
+  <rect x="721.6666666666667" y="62" width="133.33333333333334" height="643"
+        fill="#6CAEED" opacity="0.7"/>
   <line x1="721.6666666666667" y1="62" x2="721.6666666666667" y2="705"
-        stroke="#d0d0d0" stroke-width="0.8"/>
+        stroke= "#6CAEED" stroke-width="0.8"/>
   <text class="sem-lbl" x="788.3333333333334" y="80" text-anchor="middle">
-Sem 5  </text>
+Semestre 5  </text>
   <rect x="855.0" y="62" width="133.33333333333334" height="643"
-        fill="#f4f4f4" opacity="0.7"/>
+        fill="#DDEEFA" opacity="0.7"/>
   <line x1="855.0" y1="62" x2="855.0" y2="705"
-        stroke="#d0d0d0" stroke-width="0.8"/>
+        stroke= "#6CAEED" stroke-width="0.8"/>
   <text class="sem-lbl" x="921.6666666666666" y="80" text-anchor="middle">
-Sem 6  </text>
+Semestre 6  </text>
+  <rect x="988.3333333333334" y="62" width="133.33333333333334" height="643"
+        fill="#6CAEED" opacity="0.7"/>
   <line x1="988.3333333333334" y1="62" x2="988.3333333333334" y2="705"
-        stroke="#d0d0d0" stroke-width="0.8"/>
+        stroke= "#6CAEED" stroke-width="0.8"/>
   <text class="sem-lbl" x="1055.0" y="80" text-anchor="middle">
-Sem 7  </text>
+Semestre 7  </text>
   <rect x="1121.6666666666667" y="62" width="133.33333333333334" height="643"
-        fill="#f4f4f4" opacity="0.7"/>
+        fill="#DDEEFA" opacity="0.7"/>
   <line x1="1121.6666666666667" y1="62" x2="1121.6666666666667" y2="705"
-        stroke="#d0d0d0" stroke-width="0.8"/>
+        stroke= "#6CAEED" stroke-width="0.8"/>
   <text class="sem-lbl" x="1188.3333333333335" y="80" text-anchor="middle">
-Sem 8  </text>
+Semestre 8  </text>
   <line x1="1255" y1="62" x2="1255" y2="705"
-        stroke="#d0d0d0" stroke-width="0.8"/>
+        stroke="#DDEEFA" strodke-width="0.8"/>
 
   <!-- ── Línea base inferior ───────────────────────────────────────────── -->
   <line x1="55" y1="705" x2="1255" y2="705"
-        stroke="#ccc" stroke-width="0.8"/>
+        stroke="#DDEEFA" stroke-width="0.8"/>
 
   <!-- ── Enlaces (dibujados primero, detrás de los nodos) ──────────────── -->
   <line class="link-correq" href="#row-QU1106"
-        x1="255.0" y1="499.5" x2="255.0" y2="431.5"
+        x1="255.0" y1="529.5" x2="255.0" y2="461.5"
         marker-end="url(#arr-correq)"/>
   <line class="link-correq" href="#row-QU1102"
-        x1="255.0" y1="431.5" x2="255.0" y2="499.5"
+        x1="255.0" y1="461.5" x2="255.0" y2="529.5"
         marker-end="url(#arr-correq)"/>
   <line class="link-req" href="#row-MA0101"
-        x1="255.0" y1="295.5" x2="388.33333333333337" y2="91.5"
+        x1="255.0" y1="325.5" x2="388.33333333333337" y2="121.5"
         marker-end="url(#arr-req)"/>
   <line class="link-req" href="#row-CI1106"
-        x1="255.0" y1="91.5" x2="388.33333333333337" y2="159.5"
+        x1="255.0" y1="121.5" x2="388.33333333333337" y2="189.5"
         marker-end="url(#arr-req)"/>
   <line class="link-req" href="#row-CI0200"
-        x1="121.66666666666667" y1="295.5" x2="388.33333333333337" y2="227.5"
+        x1="121.66666666666667" y1="325.5" x2="388.33333333333337" y2="257.5"
         marker-end="url(#arr-req)"/>
   <line class="link-req" href="#row-CI0202"
-        x1="121.66666666666667" y1="363.5" x2="388.33333333333337" y2="227.5"
+        x1="121.66666666666667" y1="393.5" x2="388.33333333333337" y2="257.5"
         marker-end="url(#arr-req)"/>
   <line class="link-correq" href="#row-MA1102"
-        x1="388.33333333333337" y1="431.5" x2="388.33333333333337" y2="295.5"
+        x1="388.33333333333337" y1="461.5" x2="388.33333333333337" y2="325.5"
         marker-end="url(#arr-correq)"/>
   <line class="link-correq" href="#row-FI1101"
-        x1="388.33333333333337" y1="295.5" x2="388.33333333333337" y2="363.5"
+        x1="388.33333333333337" y1="325.5" x2="388.33333333333337" y2="393.5"
         marker-end="url(#arr-correq)"/>
   <line class="link-req" href="#row-MA0101"
-        x1="255.0" y1="295.5" x2="388.33333333333337" y2="431.5"
+        x1="255.0" y1="325.5" x2="388.33333333333337" y2="461.5"
         marker-end="url(#arr-req)"/>
   <line class="link-req" href="#row-QU1102"
-        x1="255.0" y1="431.5" x2="388.33333333333337" y2="499.5"
+        x1="255.0" y1="461.5" x2="388.33333333333337" y2="529.5"
         marker-end="url(#arr-req)"/>
   <line class="link-req" href="#row-QU1106"
-        x1="255.0" y1="499.5" x2="388.33333333333337" y2="499.5"
+        x1="255.0" y1="529.5" x2="388.33333333333337" y2="529.5"
         marker-end="url(#arr-req)"/>
   <line class="link-correq" href="#row-QU1107"
-        x1="388.33333333333337" y1="567.5" x2="388.33333333333337" y2="499.5"
+        x1="388.33333333333337" y1="597.5" x2="388.33333333333337" y2="529.5"
         marker-end="url(#arr-correq)"/>
   <line class="link-req" href="#row-QU1102"
-        x1="255.0" y1="431.5" x2="388.33333333333337" y2="567.5"
+        x1="255.0" y1="461.5" x2="388.33333333333337" y2="597.5"
         marker-end="url(#arr-req)"/>
   <line class="link-req" href="#row-QU1106"
-        x1="255.0" y1="499.5" x2="388.33333333333337" y2="567.5"
+        x1="255.0" y1="529.5" x2="388.33333333333337" y2="597.5"
         marker-end="url(#arr-req)"/>
   <line class="link-correq" href="#row-QU1104"
-        x1="388.33333333333337" y1="499.5" x2="388.33333333333337" y2="567.5"
+        x1="388.33333333333337" y1="529.5" x2="388.33333333333337" y2="597.5"
         marker-end="url(#arr-correq)"/>
   <line class="link-req" href="#row-CI1230"
-        x1="388.33333333333337" y1="227.5" x2="521.6666666666666" y2="91.5"
+        x1="388.33333333333337" y1="257.5" x2="521.6666666666666" y2="121.5"
         marker-end="url(#arr-req)"/>
   <line class="link-req" href="#row-MA1102"
-        x1="388.33333333333337" y1="431.5" x2="521.6666666666666" y2="159.5"
+        x1="388.33333333333337" y1="461.5" x2="521.6666666666666" y2="189.5"
         marker-end="url(#arr-req)"/>
   <line class="link-req" href="#row-QU1107"
-        x1="388.33333333333337" y1="567.5" x2="521.6666666666666" y2="159.5"
+        x1="388.33333333333337" y1="597.5" x2="521.6666666666666" y2="189.5"
         marker-end="url(#arr-req)"/>
   <line class="link-req" href="#row-FI1101"
-        x1="388.33333333333337" y1="295.5" x2="521.6666666666666" y2="227.5"
+        x1="388.33333333333337" y1="325.5" x2="521.6666666666666" y2="257.5"
         marker-end="url(#arr-req)"/>
   <line class="link-req" href="#row-FI1201"
-        x1="388.33333333333337" y1="363.5" x2="521.6666666666666" y2="227.5"
+        x1="388.33333333333337" y1="393.5" x2="521.6666666666666" y2="257.5"
         marker-end="url(#arr-req)"/>
   <line class="link-req" href="#row-FI1101"
-        x1="388.33333333333337" y1="295.5" x2="521.6666666666666" y2="295.5"
+        x1="388.33333333333337" y1="325.5" x2="521.6666666666666" y2="325.5"
         marker-end="url(#arr-req)"/>
   <line class="link-req" href="#row-FI1201"
-        x1="388.33333333333337" y1="363.5" x2="521.6666666666666" y2="295.5"
+        x1="388.33333333333337" y1="393.5" x2="521.6666666666666" y2="325.5"
         marker-end="url(#arr-req)"/>
   <line class="link-correq" href="#row-FI1102"
-        x1="521.6666666666666" y1="227.5" x2="521.6666666666666" y2="295.5"
+        x1="521.6666666666666" y1="257.5" x2="521.6666666666666" y2="325.5"
         marker-end="url(#arr-correq)"/>
   <line class="link-req" href="#row-MA1102"
-        x1="388.33333333333337" y1="431.5" x2="521.6666666666666" y2="363.5"
+        x1="388.33333333333337" y1="461.5" x2="521.6666666666666" y2="393.5"
         marker-end="url(#arr-req)"/>
   <line class="link-req" href="#row-QU1104"
-        x1="388.33333333333337" y1="499.5" x2="521.6666666666666" y2="431.5"
+        x1="388.33333333333337" y1="529.5" x2="521.6666666666666" y2="461.5"
         marker-end="url(#arr-req)"/>
   <line class="link-req" href="#row-QU1107"
-        x1="388.33333333333337" y1="567.5" x2="521.6666666666666" y2="431.5"
+        x1="388.33333333333337" y1="597.5" x2="521.6666666666666" y2="461.5"
         marker-end="url(#arr-req)"/>
   <line class="link-correq" href="#row-QU2404"
-        x1="521.6666666666666" y1="499.5" x2="521.6666666666666" y2="431.5"
+        x1="521.6666666666666" y1="529.5" x2="521.6666666666666" y2="461.5"
         marker-end="url(#arr-correq)"/>
   <line class="link-req" href="#row-QU1104"
-        x1="388.33333333333337" y1="499.5" x2="521.6666666666666" y2="499.5"
+        x1="388.33333333333337" y1="529.5" x2="521.6666666666666" y2="529.5"
         marker-end="url(#arr-req)"/>
   <line class="link-req" href="#row-QU1107"
-        x1="388.33333333333337" y1="567.5" x2="521.6666666666666" y2="499.5"
+        x1="388.33333333333337" y1="597.5" x2="521.6666666666666" y2="529.5"
         marker-end="url(#arr-req)"/>
   <line class="link-correq" href="#row-QU2403"
-        x1="521.6666666666666" y1="431.5" x2="521.6666666666666" y2="499.5"
+        x1="521.6666666666666" y1="461.5" x2="521.6666666666666" y2="529.5"
         marker-end="url(#arr-correq)"/>
   <line class="link-req" href="#row-CM2103"
-        x1="521.6666666666666" y1="159.5" x2="655.0" y2="125.5"
+        x1="521.6666666666666" y1="189.5" x2="655.0" y2="155.5"
         marker-end="url(#arr-req)"/>
   <line class="link-correq" href="#row-CM3103"
-        x1="655.0" y1="261.5" x2="655.0" y2="125.5"
+        x1="655.0" y1="291.5" x2="655.0" y2="155.5"
         marker-end="url(#arr-correq)"/>
   <line class="link-req" href="#row-CM1103"
-        x1="255.0" y1="159.5" x2="655.0" y2="193.5"
+        x1="255.0" y1="189.5" x2="655.0" y2="223.5"
         marker-end="url(#arr-req)"/>
   <line class="link-correq" href="#row-CM2401"
-        x1="655.0" y1="125.5" x2="655.0" y2="193.5"
+        x1="655.0" y1="155.5" x2="655.0" y2="223.5"
         marker-end="url(#arr-correq)"/>
   <line class="link-req" href="#row-CM2103"
-        x1="521.6666666666666" y1="159.5" x2="655.0" y2="261.5"
+        x1="521.6666666666666" y1="189.5" x2="655.0" y2="291.5"
         marker-end="url(#arr-req)"/>
   <line class="link-req" href="#row-MA1103"
-        x1="521.6666666666666" y1="363.5" x2="655.0" y2="329.5"
+        x1="521.6666666666666" y1="393.5" x2="655.0" y2="359.5"
         marker-end="url(#arr-req)"/>
   <line class="link-req" href="#row-FI1101"
-        x1="388.33333333333337" y1="295.5" x2="655.0" y2="397.5"
+        x1="388.33333333333337" y1="325.5" x2="655.0" y2="427.5"
         marker-end="url(#arr-req)"/>
   <line class="link-req" href="#row-FI1201"
-        x1="388.33333333333337" y1="363.5" x2="655.0" y2="397.5"
+        x1="388.33333333333337" y1="393.5" x2="655.0" y2="427.5"
         marker-end="url(#arr-req)"/>
   <line class="link-req" href="#row-MI2101"
-        x1="255.0" y1="363.5" x2="655.0" y2="465.5"
+        x1="255.0" y1="393.5" x2="655.0" y2="495.5"
         marker-end="url(#arr-req)"/>
   <line class="link-req" href="#row-CA2125"
-        x1="388.33333333333337" y1="91.5" x2="788.3333333333334" y2="91.5"
+        x1="388.33333333333337" y1="121.5" x2="788.3333333333334" y2="121.5"
         marker-end="url(#arr-req)"/>
   <line class="link-req" href="#row-MA2105"
-        x1="655.0" y1="329.5" x2="788.3333333333334" y2="91.5"
+        x1="655.0" y1="359.5" x2="788.3333333333334" y2="121.5"
         marker-end="url(#arr-req)"/>
   <line class="link-req" href="#row-QU2403"
-        x1="521.6666666666666" y1="431.5" x2="788.3333333333334" y2="159.5"
+        x1="521.6666666666666" y1="461.5" x2="788.3333333333334" y2="189.5"
         marker-end="url(#arr-req)"/>
   <line class="link-req" href="#row-QU2404"
-        x1="521.6666666666666" y1="499.5" x2="788.3333333333334" y2="159.5"
+        x1="521.6666666666666" y1="529.5" x2="788.3333333333334" y2="189.5"
         marker-end="url(#arr-req)"/>
   <line class="link-req" href="#row-CS1502"
-        x1="255.0" y1="227.5" x2="788.3333333333334" y2="227.5"
+        x1="255.0" y1="257.5" x2="788.3333333333334" y2="257.5"
         marker-end="url(#arr-req)"/>
   <line class="link-req" href="#row-MI2106"
-        x1="655.0" y1="397.5" x2="788.3333333333334" y2="363.5"
+        x1="655.0" y1="427.5" x2="788.3333333333334" y2="393.5"
         marker-end="url(#arr-req)"/>
   <line class="link-req" href="#row-FI1102"
-        x1="521.6666666666666" y1="227.5" x2="788.3333333333334" y2="431.5"
+        x1="521.6666666666666" y1="257.5" x2="788.3333333333334" y2="461.5"
         marker-end="url(#arr-req)"/>
   <line class="link-req" href="#row-FI1202"
-        x1="521.6666666666666" y1="295.5" x2="788.3333333333334" y2="431.5"
+        x1="521.6666666666666" y1="325.5" x2="788.3333333333334" y2="461.5"
         marker-end="url(#arr-req)"/>
   <line class="link-req" href="#row-MA1103"
-        x1="521.6666666666666" y1="363.5" x2="788.3333333333334" y2="499.5"
+        x1="521.6666666666666" y1="393.5" x2="788.3333333333334" y2="529.5"
         marker-end="url(#arr-req)"/>
   <line class="link-correq" href="#row-CS2303"
-        x1="788.3333333333334" y1="227.5" x2="788.3333333333334" y2="567.5"
+        x1="788.3333333333334" y1="257.5" x2="788.3333333333334" y2="597.5"
         marker-end="url(#arr-correq)"/>
   <line class="link-req" href="#row-PI2609"
-        x1="788.3333333333334" y1="499.5" x2="921.6666666666666" y2="125.5"
+        x1="788.3333333333334" y1="529.5" x2="921.6666666666666" y2="155.5"
         marker-end="url(#arr-req)"/>
   <line class="link-req" href="#row-CM3103"
-        x1="655.0" y1="261.5" x2="921.6666666666666" y2="193.5"
+        x1="655.0" y1="291.5" x2="921.6666666666666" y2="223.5"
         marker-end="url(#arr-req)"/>
   <line class="link-req" href="#row-MA2105"
-        x1="655.0" y1="329.5" x2="921.6666666666666" y2="193.5"
+        x1="655.0" y1="359.5" x2="921.6666666666666" y2="223.5"
         marker-end="url(#arr-req)"/>
   <line class="link-req" href="#row-CM2401"
-        x1="655.0" y1="125.5" x2="921.6666666666666" y2="261.5"
+        x1="655.0" y1="155.5" x2="921.6666666666666" y2="291.5"
         marker-end="url(#arr-req)"/>
   <line class="link-req" href="#row-CM3103"
-        x1="655.0" y1="261.5" x2="921.6666666666666" y2="261.5"
+        x1="655.0" y1="291.5" x2="921.6666666666666" y2="291.5"
         marker-end="url(#arr-req)"/>
   <line class="link-req" href="#row-CM2401"
-        x1="655.0" y1="125.5" x2="921.6666666666666" y2="329.5"
+        x1="655.0" y1="155.5" x2="921.6666666666666" y2="359.5"
         marker-end="url(#arr-req)"/>
   <line class="link-req" href="#row-MI3115"
-        x1="788.3333333333334" y1="363.5" x2="921.6666666666666" y2="329.5"
+        x1="788.3333333333334" y1="393.5" x2="921.6666666666666" y2="359.5"
         marker-end="url(#arr-req)"/>
   <line class="link-req" href="#row-CM2401"
-        x1="655.0" y1="125.5" x2="921.6666666666666" y2="397.5"
+        x1="655.0" y1="155.5" x2="921.6666666666666" y2="427.5"
         marker-end="url(#arr-req)"/>
   <line class="link-req" href="#row-CM3103"
-        x1="655.0" y1="261.5" x2="921.6666666666666" y2="397.5"
+        x1="655.0" y1="291.5" x2="921.6666666666666" y2="427.5"
         marker-end="url(#arr-req)"/>
   <line class="link-correq" href="#row-CM3602"
-        x1="921.6666666666666" y1="261.5" x2="921.6666666666666" y2="397.5"
+        x1="921.6666666666666" y1="291.5" x2="921.6666666666666" y2="427.5"
         marker-end="url(#arr-correq)"/>
   <line class="link-req" href="#row-CM3501"
-        x1="788.3333333333334" y1="159.5" x2="921.6666666666666" y2="465.5"
+        x1="788.3333333333334" y1="189.5" x2="921.6666666666666" y2="495.5"
         marker-end="url(#arr-req)"/>
   <line class="link-req" href="#row-CS1502"
-        x1="255.0" y1="227.5" x2="921.6666666666666" y2="533.5"
+        x1="255.0" y1="257.5" x2="921.6666666666666" y2="563.5"
         marker-end="url(#arr-req)"/>
   <line class="link-req" href="#row-PI2609"
-        x1="788.3333333333334" y1="499.5" x2="1055.0" y2="159.5"
+        x1="788.3333333333334" y1="529.5" x2="1055.0" y2="189.5"
         marker-end="url(#arr-req)"/>
   <line class="link-req" href="#row-CM3208"
-        x1="921.6666666666666" y1="125.5" x2="1055.0" y2="227.5"
+        x1="921.6666666666666" y1="155.5" x2="1055.0" y2="257.5"
         marker-end="url(#arr-req)"/>
   <line class="link-req" href="#row-CM3602"
-        x1="921.6666666666666" y1="261.5" x2="1055.0" y2="227.5"
+        x1="921.6666666666666" y1="291.5" x2="1055.0" y2="257.5"
         marker-end="url(#arr-req)"/>
   <line class="link-req" href="#row-CM3603"
-        x1="921.6666666666666" y1="329.5" x2="1055.0" y2="295.5"
+        x1="921.6666666666666" y1="359.5" x2="1055.0" y2="325.5"
         marker-end="url(#arr-req)"/>
   <line class="link-req" href="#row-CM3207"
-        x1="788.3333333333334" y1="91.5" x2="1055.0" y2="363.5"
+        x1="788.3333333333334" y1="121.5" x2="1055.0" y2="393.5"
         marker-end="url(#arr-req)"/>
   <line class="link-req" href="#row-CM3601"
-        x1="921.6666666666666" y1="193.5" x2="1055.0" y2="363.5"
+        x1="921.6666666666666" y1="223.5" x2="1055.0" y2="393.5"
         marker-end="url(#arr-req)"/>
   <line class="link-req" href="#row-CM2401"
-        x1="655.0" y1="125.5" x2="1055.0" y2="431.5"
+        x1="655.0" y1="155.5" x2="1055.0" y2="461.5"
         marker-end="url(#arr-req)"/>
   <line class="link-req" href="#row-CM4305"
-        x1="921.6666666666666" y1="465.5" x2="1055.0" y2="431.5"
+        x1="921.6666666666666" y1="495.5" x2="1055.0" y2="461.5"
         marker-end="url(#arr-req)"/>
   <line class="link-req" href="#row-CS3404"
-        x1="921.6666666666666" y1="533.5" x2="1055.0" y2="499.5"
+        x1="921.6666666666666" y1="563.5" x2="1055.0" y2="529.5"
         marker-end="url(#arr-req)"/>
   <line class="link-req" href="#row-CM3603"
-        x1="921.6666666666666" y1="329.5" x2="1188.3333333333335" y2="227.5"
+        x1="921.6666666666666" y1="359.5" x2="1188.3333333333335" y2="257.5"
         marker-end="url(#arr-req)"/>
   <line class="link-req" href="#row-CM4701"
-        x1="1055.0" y1="363.5" x2="1188.3333333333335" y2="227.5"
+        x1="1055.0" y1="393.5" x2="1188.3333333333335" y2="257.5"
         marker-end="url(#arr-req)"/>
   <line class="link-req" href="#row-CM4305"
-        x1="921.6666666666666" y1="465.5" x2="1188.3333333333335" y2="295.5"
+        x1="921.6666666666666" y1="495.5" x2="1188.3333333333335" y2="325.5"
         marker-end="url(#arr-req)"/>
   <line class="link-req" href="#row-CM4702"
-        x1="1055.0" y1="431.5" x2="1188.3333333333335" y2="295.5"
+        x1="1055.0" y1="461.5" x2="1188.3333333333335" y2="325.5"
         marker-end="url(#arr-req)"/>
   <line class="link-req" href="#row-AE5121"
-        x1="1055.0" y1="159.5" x2="1188.3333333333335" y2="363.5"
+        x1="1055.0" y1="189.5" x2="1188.3333333333335" y2="393.5"
         marker-end="url(#arr-req)"/>
   <line class="link-correq" href="#row-CM4101"
-        x1="1188.3333333333335" y1="227.5" x2="1188.3333333333335" y2="431.5"
+        x1="1188.3333333333335" y1="257.5" x2="1188.3333333333335" y2="461.5"
         marker-end="url(#arr-correq)"/>
   <line class="link-correq" href="#row-CM4802"
-        x1="1188.3333333333335" y1="363.5" x2="1188.3333333333335" y2="431.5"
+        x1="1188.3333333333335" y1="393.5" x2="1188.3333333333335" y2="461.5"
         marker-end="url(#arr-correq)"/>
 
   <!-- ── Nodos ──────────────────────────────────────────────────────────── -->
+
   <circle id="node-CI0200" href="#row-CI0200"
-          cx="121.66666666666667" cy="295.5" r="10"
-          fill="#6a3d9a" stroke="white" stroke-width="1.0"
-          opacity="0.92"/>
-  <text class="node-lbl" x="121.66666666666667" y="295.5">CI0200</text>
-  <circle id="node-CI0202" href="#row-CI0202"
-          cx="121.66666666666667" cy="363.5" r="14"
-          fill="#6a3d9a" stroke="white" stroke-width="1.6"
-          opacity="0.92"/>
-  <text class="node-lbl" x="121.66666666666667" y="363.5">CI0202</text>
-  <circle id="node-CI1106" href="#row-CI1106"
-          cx="255.0" cy="91.5" r="14"
-          fill="#6a3d9a" stroke="white" stroke-width="2.2"
-          opacity="0.92"/>
-  <text class="node-lbl" x="255.0" y="91.5">CI1106</text>
-  <circle id="node-CM1103" href="#row-CM1103"
-          cx="255.0" cy="159.5" r="16"
-          fill="#1f78b4" stroke="white" stroke-width="2.6"
-          opacity="0.92"/>
-  <text class="node-lbl" x="255.0" y="159.5">CM1103</text>
-  <circle id="node-CS1502" href="#row-CS1502"
-          cx="255.0" cy="227.5" r="12"
-          fill="#fb9a99" stroke="white" stroke-width="1.4"
-          opacity="0.92"/>
-  <text class="node-lbl" x="255.0" y="227.5">CS1502</text>
-  <circle id="node-MA0101" href="#row-MA0101"
-          cx="255.0" cy="295.5" r="14"
-          fill="#33a02c" stroke="white" stroke-width="2.0"
-          opacity="0.92"/>
-  <text class="node-lbl" x="255.0" y="295.5">MA0101</text>
-  <circle id="node-MI2101" href="#row-MI2101"
-          cx="255.0" cy="363.5" r="16"
-          fill="#756bb1" stroke="white" stroke-width="2.8"
-          opacity="0.92"/>
-  <text class="node-lbl" x="255.0" y="363.5">MI2101</text>
-  <circle id="node-QU1102" href="#row-QU1102"
-          cx="255.0" cy="431.5" r="12"
-          fill="#ff7f00" stroke="white" stroke-width="1.4"
-          opacity="0.92"/>
-  <text class="node-lbl" x="255.0" y="431.5">QU1102</text>
-  <circle id="node-QU1106" href="#row-QU1106"
-          cx="255.0" cy="499.5" r="16"
-          fill="#ff7f00" stroke="white" stroke-width="1.8"
-          opacity="0.92"/>
-  <text class="node-lbl" x="255.0" y="499.5">QU1106</text>
+          cx="121.66666666666667" cy="325.5" r="15.0"
+          fill="#b36bff" stroke="white" stroke-width="1.5" opacity="0.92"/>
+
+
+
+
+
+
+  <text class="node-lbl" x="121.66666666666667" y="325.5">CI0200</text>
+
+
+
+  <rect id="node-CI0202" href="#row-CI0202"
+        x="105.29866666666666" y="377.132" width="32.736000000000004" height="32.736000000000004"
+        fill="#b36bff" stroke="white" stroke-width="1.5" opacity="0.92"/>
+
+
+
+
+  <text class="node-lbl" x="121.66666666666667" y="393.5">CI0202</text>
+
+
+
+  <rect id="node-CI1106" href="#row-CI1106"
+        x="235.464" y="101.964" width="39.072" height="39.072"
+        fill="#b36bff" stroke="white" stroke-width="1.5" opacity="0.92"/>
+
+
+
+
+  <text class="node-lbl" x="255.0" y="121.5">CI1106</text>
+
+
+
+
+  <rect id="node-CM1103" href="#row-CM1103"
+        x="223.02" y="171.05" width="63.959999999999994" height="36.9"
+        fill="#6377f9" stroke="white" stroke-width="1.5" opacity="0.92"/>
+
+
+
+  <text class="node-lbl" x="255.0" y="189.5">CM1103</text>
+
+
+  <polygon id="node-CS1502" href="#row-CS1502"
+           points="255.0,240.1 270.0684,266.2 239.9316,266.2"
+           fill="#eb99fb" stroke="white" stroke-width="1.5" opacity="0.92"/>
+
+
+
+
+
+  <text class="node-lbl" x="255.0" y="257.5">CS1502</text>
+
+
+
+  <rect id="node-MA0101" href="#row-MA0101"
+        x="236.52" y="307.02" width="36.96" height="36.96"
+        fill="#ffd429" stroke="white" stroke-width="1.5" opacity="0.92"/>
+
+
+
+
+  <text class="node-lbl" x="255.0" y="325.5">MA0101</text>
+
+
+
+
+  <rect id="node-MI2101" href="#row-MI2101"
+        x="221.46" y="374.15" width="67.08" height="38.699999999999996"
+        fill="#d8ff6c" stroke="white" stroke-width="1.5" opacity="0.92"/>
+
+
+
+  <text class="node-lbl" x="255.0" y="393.5">MI2101</text>
+
+
+  <polygon id="node-QU1102" href="#row-QU1102"
+           points="255.0,444.1 270.0684,470.2 239.9316,470.2"
+           fill="#ff8000" stroke="white" stroke-width="1.5" opacity="0.92"/>
+
+
+
+
+
+  <text class="node-lbl" x="255.0" y="461.5">QU1102</text>
+
+
+
+
+  <rect id="node-QU1106" href="#row-QU1106"
+        x="229.26" y="514.65" width="51.48" height="29.699999999999996"
+        fill="#ff8000" stroke="white" stroke-width="1.5" opacity="0.92"/>
+
+
+
+  <text class="node-lbl" x="255.0" y="529.5">QU1106</text>
+
   <circle id="node-SE1100" href="#row-SE1100"
-          cx="255.0" cy="567.5" r="10"
-          fill="#fdb462" stroke="white" stroke-width="1.4"
-          opacity="0.92"/>
-  <text class="node-lbl" x="255.0" y="567.5">SE1100</text>
-  <circle id="node-CA2125" href="#row-CA2125"
-          cx="388.33333333333337" cy="91.5" r="16"
-          fill="#6a3d9a" stroke="white" stroke-width="1.8"
-          opacity="0.92"/>
-  <text class="node-lbl" x="388.33333333333337" y="91.5">CA2125</text>
-  <circle id="node-CI1107" href="#row-CI1107"
-          cx="388.33333333333337" cy="159.5" r="12"
-          fill="#6a3d9a" stroke="white" stroke-width="1.6"
-          opacity="0.92"/>
-  <text class="node-lbl" x="388.33333333333337" y="159.5">CI1107</text>
-  <circle id="node-CI1230" href="#row-CI1230"
-          cx="388.33333333333337" cy="227.5" r="14"
-          fill="#6a3d9a" stroke="white" stroke-width="2.2"
-          opacity="0.92"/>
-  <text class="node-lbl" x="388.33333333333337" y="227.5">CI1230</text>
-  <circle id="node-FI1101" href="#row-FI1101"
-          cx="388.33333333333337" cy="295.5" r="16"
-          fill="#e31a1c" stroke="white" stroke-width="1.8"
-          opacity="0.92"/>
-  <text class="node-lbl" x="388.33333333333337" y="295.5">FI1101</text>
-  <circle id="node-FI1201" href="#row-FI1201"
-          cx="388.33333333333337" cy="363.5" r="12"
-          fill="#e31a1c" stroke="white" stroke-width="1.4"
-          opacity="0.92"/>
-  <text class="node-lbl" x="388.33333333333337" y="363.5">FI1201</text>
-  <circle id="node-MA1102" href="#row-MA1102"
-          cx="388.33333333333337" cy="431.5" r="18"
-          fill="#33a02c" stroke="white" stroke-width="2.0"
-          opacity="0.92"/>
-  <text class="node-lbl" x="388.33333333333337" y="431.5">MA1102</text>
-  <circle id="node-QU1104" href="#row-QU1104"
-          cx="388.33333333333337" cy="499.5" r="12"
-          fill="#ff7f00" stroke="white" stroke-width="1.4"
-          opacity="0.92"/>
-  <text class="node-lbl" x="388.33333333333337" y="499.5">QU1104</text>
-  <circle id="node-QU1107" href="#row-QU1107"
-          cx="388.33333333333337" cy="567.5" r="16"
-          fill="#ff7f00" stroke="white" stroke-width="1.8"
-          opacity="0.92"/>
-  <text class="node-lbl" x="388.33333333333337" y="567.5">QU1107</text>
-  <circle id="node-CI1231" href="#row-CI1231"
-          cx="521.6666666666666" cy="91.5" r="14"
-          fill="#6a3d9a" stroke="white" stroke-width="1.6"
-          opacity="0.92"/>
-  <text class="node-lbl" x="521.6666666666666" y="91.5">CI1231</text>
-  <circle id="node-CM2103" href="#row-CM2103"
-          cx="521.6666666666666" cy="159.5" r="16"
-          fill="#1f78b4" stroke="white" stroke-width="1.8"
-          opacity="0.92"/>
-  <text class="node-lbl" x="521.6666666666666" y="159.5">CM2103</text>
-  <circle id="node-FI1102" href="#row-FI1102"
-          cx="521.6666666666666" cy="227.5" r="16"
-          fill="#e31a1c" stroke="white" stroke-width="1.8"
-          opacity="0.92"/>
-  <text class="node-lbl" x="521.6666666666666" y="227.5">FI1102</text>
-  <circle id="node-FI1202" href="#row-FI1202"
-          cx="521.6666666666666" cy="295.5" r="12"
-          fill="#e31a1c" stroke="white" stroke-width="1.4"
-          opacity="0.92"/>
-  <text class="node-lbl" x="521.6666666666666" y="295.5">FI1202</text>
-  <circle id="node-MA1103" href="#row-MA1103"
-          cx="521.6666666666666" cy="363.5" r="18"
-          fill="#33a02c" stroke="white" stroke-width="1.8"
-          opacity="0.92"/>
-  <text class="node-lbl" x="521.6666666666666" y="363.5">MA1103</text>
-  <circle id="node-QU2403" href="#row-QU2403"
-          cx="521.6666666666666" cy="431.5" r="16"
-          fill="#ff7f00" stroke="white" stroke-width="1.8"
-          opacity="0.92"/>
-  <text class="node-lbl" x="521.6666666666666" y="431.5">QU2403</text>
-  <circle id="node-QU2404" href="#row-QU2404"
-          cx="521.6666666666666" cy="499.5" r="14"
-          fill="#ff7f00" stroke="white" stroke-width="1.8"
-          opacity="0.92"/>
-  <text class="node-lbl" x="521.6666666666666" y="499.5">QU2404</text>
+          cx="255.0" cy="597.5" r="17.4"
+          fill="#86f5ff" stroke="white" stroke-width="1.5" opacity="0.92"/>
+
+
+
+
+
+
+  <text class="node-lbl" x="255.0" y="597.5">SE1100</text>
+
+
+
+
+  <rect id="node-CA2125" href="#row-CA2125"
+        x="362.59333333333336" y="106.65" width="51.48" height="29.699999999999996"
+        fill="#b36bff" stroke="white" stroke-width="1.5" opacity="0.92"/>
+
+
+
+  <text class="node-lbl" x="388.33333333333337" y="121.5">CA2125</text>
+
+
+  <polygon id="node-CI1107" href="#row-CI1107"
+           points="388.33333333333337,170.9 404.44093333333336,198.8 372.2257333333334,198.8"
+           fill="#b36bff" stroke="white" stroke-width="1.5" opacity="0.92"/>
+
+
+
+
+
+  <text class="node-lbl" x="388.33333333333337" y="189.5">CI1107</text>
+
+
+
+  <rect id="node-CI1230" href="#row-CI1230"
+        x="368.79733333333337" y="237.964" width="39.072" height="39.072"
+        fill="#b36bff" stroke="white" stroke-width="1.5" opacity="0.92"/>
+
+
+
+
+  <text class="node-lbl" x="388.33333333333337" y="257.5">CI1230</text>
+
+
+
+
+  <rect id="node-FI1101" href="#row-FI1101"
+        x="362.59333333333336" y="310.65" width="51.48" height="29.699999999999996"
+        fill="#7eb5fc" stroke="white" stroke-width="1.5" opacity="0.92"/>
+
+
+
+  <text class="node-lbl" x="388.33333333333337" y="325.5">FI1101</text>
+
+
+  <polygon id="node-FI1201" href="#row-FI1201"
+           points="388.33333333333337,376.1 403.40173333333337,402.2 373.2649333333334,402.2"
+           fill="#7eb5fc" stroke="white" stroke-width="1.5" opacity="0.92"/>
+
+
+
+
+
+  <text class="node-lbl" x="388.33333333333337" y="393.5">FI1201</text>
+
+
+
+
+
+  <polygon id="node-MA1102" href="#row-MA1102"
+           points="388.33333333333337,440.5 408.3043333333334,455.011 400.6813333333334,478.489 375.98533333333336,478.489 368.36233333333337,455.011"
+           fill="#ffd429" stroke="white" stroke-width="1.5" opacity="0.92"/>
+
+
+  <text class="node-lbl" x="388.33333333333337" y="461.5">MA1102</text>
+
+
+  <polygon id="node-QU1104" href="#row-QU1104"
+           points="388.33333333333337,512.1 403.40173333333337,538.2 373.2649333333334,538.2"
+           fill="#ff8000" stroke="white" stroke-width="1.5" opacity="0.92"/>
+
+
+
+
+
+  <text class="node-lbl" x="388.33333333333337" y="529.5">QU1104</text>
+
+
+
+
+  <rect id="node-QU1107" href="#row-QU1107"
+        x="362.59333333333336" y="582.65" width="51.48" height="29.699999999999996"
+        fill="#ff8000" stroke="white" stroke-width="1.5" opacity="0.92"/>
+
+
+
+  <text class="node-lbl" x="388.33333333333337" y="597.5">QU1107</text>
+
+
+
+  <rect id="node-CI1231" href="#row-CI1231"
+        x="505.29866666666663" y="105.132" width="32.736000000000004" height="32.736000000000004"
+        fill="#b36bff" stroke="white" stroke-width="1.5" opacity="0.92"/>
+
+
+
+
+  <text class="node-lbl" x="521.6666666666666" y="121.5">CI1231</text>
+
+
+
+
+  <rect id="node-CM2103" href="#row-CM2103"
+        x="495.9266666666666" y="174.65" width="51.48" height="29.699999999999996"
+        fill="#6377f9" stroke="white" stroke-width="1.5" opacity="0.92"/>
+
+
+
+  <text class="node-lbl" x="521.6666666666666" y="189.5">CM2103</text>
+
+
+
+
+  <rect id="node-FI1102" href="#row-FI1102"
+        x="495.9266666666666" y="242.65" width="51.48" height="29.699999999999996"
+        fill="#7eb5fc" stroke="white" stroke-width="1.5" opacity="0.92"/>
+
+
+
+  <text class="node-lbl" x="521.6666666666666" y="257.5">FI1102</text>
+
+
+  <polygon id="node-FI1202" href="#row-FI1202"
+           points="521.6666666666666,308.1 536.7350666666666,334.2 506.59826666666663,334.2"
+           fill="#7eb5fc" stroke="white" stroke-width="1.5" opacity="0.92"/>
+
+
+
+
+
+  <text class="node-lbl" x="521.6666666666666" y="325.5">FI1202</text>
+
+
+
+
+
+  <polygon id="node-MA1103" href="#row-MA1103"
+           points="521.6666666666666,373.7 540.4964666666666,387.3818 533.3090666666666,409.5182 510.0242666666666,409.5182 502.83686666666665,387.3818"
+           fill="#ffd429" stroke="white" stroke-width="1.5" opacity="0.92"/>
+
+
+  <text class="node-lbl" x="521.6666666666666" y="393.5">MA1103</text>
+
+
+
+
+  <rect id="node-QU2403" href="#row-QU2403"
+        x="495.9266666666666" y="446.65" width="51.48" height="29.699999999999996"
+        fill="#ff8000" stroke="white" stroke-width="1.5" opacity="0.92"/>
+
+
+
+  <text class="node-lbl" x="521.6666666666666" y="461.5">QU2403</text>
+
+
+
+  <rect id="node-QU2404" href="#row-QU2404"
+        x="504.24266666666665" y="512.076" width="34.84799999999999" height="34.84799999999999"
+        fill="#ff8000" stroke="white" stroke-width="1.5" opacity="0.92"/>
+
+
+
+
+  <text class="node-lbl" x="521.6666666666666" y="529.5">QU2404</text>
+
   <circle id="node-SE1200" href="#row-SE1200"
-          cx="521.6666666666666" cy="567.5" r="10"
-          fill="#fdb462" stroke="white" stroke-width="1.4"
-          opacity="0.92"/>
-  <text class="node-lbl" x="521.6666666666666" y="567.5">SE1200</text>
-  <circle id="node-CM2401" href="#row-CM2401"
-          cx="655.0" cy="125.5" r="16"
-          fill="#1f78b4" stroke="white" stroke-width="2.8"
-          opacity="0.92"/>
-  <text class="node-lbl" x="655.0" y="125.5">CM2401</text>
-  <circle id="node-CM2402" href="#row-CM2402"
-          cx="655.0" cy="193.5" r="12"
-          fill="#1f78b4" stroke="white" stroke-width="1.6"
-          opacity="0.92"/>
-  <text class="node-lbl" x="655.0" y="193.5">CM2402</text>
-  <circle id="node-CM3103" href="#row-CM3103"
-          cx="655.0" cy="261.5" r="16"
-          fill="#1f78b4" stroke="white" stroke-width="1.8"
-          opacity="0.92"/>
-  <text class="node-lbl" x="655.0" y="261.5">CM3103</text>
-  <circle id="node-MA2105" href="#row-MA2105"
-          cx="655.0" cy="329.5" r="18"
-          fill="#33a02c" stroke="white" stroke-width="1.8"
-          opacity="0.92"/>
-  <text class="node-lbl" x="655.0" y="329.5">MA2105</text>
-  <circle id="node-MI2106" href="#row-MI2106"
-          cx="655.0" cy="397.5" r="16"
-          fill="#756bb1" stroke="white" stroke-width="1.8"
-          opacity="0.92"/>
-  <text class="node-lbl" x="655.0" y="397.5">MI2106</text>
-  <circle id="node-MI3124" href="#row-MI3124"
-          cx="655.0" cy="465.5" r="18"
-          fill="#756bb1" stroke="white" stroke-width="1.8"
-          opacity="0.92"/>
-  <text class="node-lbl" x="655.0" y="465.5">MI3124</text>
+          cx="521.6666666666666" cy="597.5" r="17.4"
+          fill="#86f5ff" stroke="white" stroke-width="1.5" opacity="0.92"/>
+
+
+
+
+
+
+  <text class="node-lbl" x="521.6666666666666" y="597.5">SE1200</text>
+
+
+
+
+  <rect id="node-CM2401" href="#row-CM2401"
+        x="621.46" y="136.15" width="67.08" height="38.699999999999996"
+        fill="#6377f9" stroke="white" stroke-width="1.5" opacity="0.92"/>
+
+
+
+  <text class="node-lbl" x="655.0" y="155.5">CM2401</text>
+
+
+  <polygon id="node-CM2402" href="#row-CM2402"
+           points="655.0,204.9 671.1076,232.8 638.8924,232.8"
+           fill="#6377f9" stroke="white" stroke-width="1.5" opacity="0.92"/>
+
+
+
+
+
+  <text class="node-lbl" x="655.0" y="223.5">CM2402</text>
+
+
+
+
+  <rect id="node-CM3103" href="#row-CM3103"
+        x="629.26" y="276.65" width="51.48" height="29.699999999999996"
+        fill="#6377f9" stroke="white" stroke-width="1.5" opacity="0.92"/>
+
+
+
+  <text class="node-lbl" x="655.0" y="291.5">CM3103</text>
+
+
+
+
+
+  <polygon id="node-MA2105" href="#row-MA2105"
+           points="655.0,339.7 673.8298,353.3818 666.6424,375.5182 643.3576,375.5182 636.1702,353.3818"
+           fill="#ffd429" stroke="white" stroke-width="1.5" opacity="0.92"/>
+
+
+  <text class="node-lbl" x="655.0" y="359.5">MA2105</text>
+
+
+
+
+  <rect id="node-MI2106" href="#row-MI2106"
+        x="629.26" y="412.65" width="51.48" height="29.699999999999996"
+        fill="#d8ff6c" stroke="white" stroke-width="1.5" opacity="0.92"/>
+
+
+
+  <text class="node-lbl" x="655.0" y="427.5">MI2106</text>
+
+
+
+
+
+  <polygon id="node-MI3124" href="#row-MI3124"
+           points="655.0,475.7 673.8298,489.3818 666.6424,511.5182 643.3576,511.5182 636.1702,489.3818"
+           fill="#d8ff6c" stroke="white" stroke-width="1.5" opacity="0.92"/>
+
+
+  <text class="node-lbl" x="655.0" y="495.5">MI3124</text>
+
   <circle id="node-SE1400" href="#row-SE1400"
-          cx="655.0" cy="533.5" r="10"
-          fill="#fdb462" stroke="white" stroke-width="1.4"
-          opacity="0.92"/>
-  <text class="node-lbl" x="655.0" y="533.5">SE1400</text>
-  <circle id="node-CM3207" href="#row-CM3207"
-          cx="788.3333333333334" cy="91.5" r="16"
-          fill="#1f78b4" stroke="white" stroke-width="1.8"
-          opacity="0.92"/>
-  <text class="node-lbl" x="788.3333333333334" y="91.5">CM3207</text>
-  <circle id="node-CM3501" href="#row-CM3501"
-          cx="788.3333333333334" cy="159.5" r="16"
-          fill="#1f78b4" stroke="white" stroke-width="2.8"
-          opacity="0.92"/>
-  <text class="node-lbl" x="788.3333333333334" y="159.5">CM3501</text>
-  <circle id="node-CS2303" href="#row-CS2303"
-          cx="788.3333333333334" cy="227.5" r="14"
-          fill="#fb9a99" stroke="white" stroke-width="2.2"
-          opacity="0.92"/>
-  <text class="node-lbl" x="788.3333333333334" y="227.5">CS2303</text>
+          cx="655.0" cy="563.5" r="17.4"
+          fill="#86f5ff" stroke="white" stroke-width="1.5" opacity="0.92"/>
+
+
+
+
+
+
+  <text class="node-lbl" x="655.0" y="563.5">SE1400</text>
+
+
+
+
+  <rect id="node-CM3207" href="#row-CM3207"
+        x="762.5933333333334" y="106.65" width="51.48" height="29.699999999999996"
+        fill="#6377f9" stroke="white" stroke-width="1.5" opacity="0.92"/>
+
+
+
+  <text class="node-lbl" x="788.3333333333334" y="121.5">CM3207</text>
+
+
+
+
+  <rect id="node-CM3501" href="#row-CM3501"
+        x="754.7933333333334" y="170.15" width="67.08" height="38.699999999999996"
+        fill="#6377f9" stroke="white" stroke-width="1.5" opacity="0.92"/>
+
+
+
+  <text class="node-lbl" x="788.3333333333334" y="189.5">CM3501</text>
+
+
+
+  <rect id="node-CS2303" href="#row-CS2303"
+        x="768.7973333333334" y="237.964" width="39.072" height="39.072"
+        fill="#eb99fb" stroke="white" stroke-width="1.5" opacity="0.92"/>
+
+
+
+
+  <text class="node-lbl" x="788.3333333333334" y="257.5">CS2303</text>
+
   <circle id="node-FH1000" href="#row-FH1000"
-          cx="788.3333333333334" cy="295.5" r="10"
-          fill="#4dac26" stroke="white" stroke-width="1.4"
-          opacity="0.92"/>
-  <text class="node-lbl" x="788.3333333333334" y="295.5">FH1000</text>
-  <circle id="node-MI3115" href="#row-MI3115"
-          cx="788.3333333333334" cy="363.5" r="16"
-          fill="#756bb1" stroke="white" stroke-width="1.8"
-          opacity="0.92"/>
-  <text class="node-lbl" x="788.3333333333334" y="363.5">MI3115</text>
-  <circle id="node-MI4510" href="#row-MI4510"
-          cx="788.3333333333334" cy="431.5" r="16"
-          fill="#756bb1" stroke="white" stroke-width="1.8"
-          opacity="0.92"/>
-  <text class="node-lbl" x="788.3333333333334" y="431.5">MI4510</text>
-  <circle id="node-PI2609" href="#row-PI2609"
-          cx="788.3333333333334" cy="499.5" r="14"
-          fill="#888888" stroke="white" stroke-width="1.6"
-          opacity="0.92"/>
-  <text class="node-lbl" x="788.3333333333334" y="499.5">PI2609</text>
-  <circle id="node-SO2601" href="#row-SO2601"
-          cx="788.3333333333334" cy="567.5" r="12"
-          fill="#888888" stroke="white" stroke-width="1.4"
-          opacity="0.92"/>
-  <text class="node-lbl" x="788.3333333333334" y="567.5">SO2601</text>
-  <circle id="node-CM3208" href="#row-CM3208"
-          cx="921.6666666666666" cy="125.5" r="16"
-          fill="#1f78b4" stroke="white" stroke-width="1.8"
-          opacity="0.92"/>
-  <text class="node-lbl" x="921.6666666666666" y="125.5">CM3208</text>
-  <circle id="node-CM3601" href="#row-CM3601"
-          cx="921.6666666666666" cy="193.5" r="16"
-          fill="#1f78b4" stroke="white" stroke-width="2.8"
-          opacity="0.92"/>
-  <text class="node-lbl" x="921.6666666666666" y="193.5">CM3601</text>
-  <circle id="node-CM3602" href="#row-CM3602"
-          cx="921.6666666666666" cy="261.5" r="16"
-          fill="#1f78b4" stroke="white" stroke-width="2.8"
-          opacity="0.92"/>
-  <text class="node-lbl" x="921.6666666666666" y="261.5">CM3602</text>
-  <circle id="node-CM3603" href="#row-CM3603"
-          cx="921.6666666666666" cy="329.5" r="16"
-          fill="#1f78b4" stroke="white" stroke-width="2.8"
-          opacity="0.92"/>
-  <text class="node-lbl" x="921.6666666666666" y="329.5">CM3603</text>
-  <circle id="node-CM4202" href="#row-CM4202"
-          cx="921.6666666666666" cy="397.5" r="14"
-          fill="#1f78b4" stroke="white" stroke-width="1.6"
-          opacity="0.92"/>
-  <text class="node-lbl" x="921.6666666666666" y="397.5">CM4202</text>
-  <circle id="node-CM4305" href="#row-CM4305"
-          cx="921.6666666666666" cy="465.5" r="14"
-          fill="#1f78b4" stroke="white" stroke-width="1.6"
-          opacity="0.92"/>
-  <text class="node-lbl" x="921.6666666666666" y="465.5">CM4305</text>
-  <circle id="node-CS3404" href="#row-CS3404"
-          cx="921.6666666666666" cy="533.5" r="14"
-          fill="#fb9a99" stroke="white" stroke-width="2.0"
-          opacity="0.92"/>
-  <text class="node-lbl" x="921.6666666666666" y="533.5">CS3404</text>
-  <circle id="node-AE5121" href="#row-AE5121"
-          cx="1055.0" cy="159.5" r="16"
-          fill="#a6761d" stroke="white" stroke-width="1.6"
-          opacity="0.92"/>
-  <text class="node-lbl" x="1055.0" y="159.5">AE5121</text>
-  <circle id="node-CM3205" href="#row-CM3205"
-          cx="1055.0" cy="227.5" r="16"
-          fill="#1f78b4" stroke="white" stroke-width="1.8"
-          opacity="0.92"/>
-  <text class="node-lbl" x="1055.0" y="227.5">CM3205</text>
-  <circle id="node-CM4307" href="#row-CM4307"
-          cx="1055.0" cy="295.5" r="18"
-          fill="#1f78b4" stroke="white" stroke-width="1.8"
-          opacity="0.92"/>
-  <text class="node-lbl" x="1055.0" y="295.5">CM4307</text>
-  <circle id="node-CM4701" href="#row-CM4701"
-          cx="1055.0" cy="363.5" r="16"
-          fill="#1f78b4" stroke="white" stroke-width="2.8"
-          opacity="0.92"/>
-  <text class="node-lbl" x="1055.0" y="363.5">CM4701</text>
-  <circle id="node-CM4702" href="#row-CM4702"
-          cx="1055.0" cy="431.5" r="16"
-          fill="#1f78b4" stroke="white" stroke-width="2.8"
-          opacity="0.92"/>
-  <text class="node-lbl" x="1055.0" y="431.5">CM4702</text>
-  <circle id="node-CS4402" href="#row-CS4402"
-          cx="1055.0" cy="499.5" r="14"
-          fill="#fb9a99" stroke="white" stroke-width="1.6"
-          opacity="0.92"/>
-  <text class="node-lbl" x="1055.0" y="499.5">CS4402</text>
-  <circle id="node-CM4101" href="#row-CM4101"
-          cx="1188.3333333333335" cy="227.5" r="18"
-          fill="#1f78b4" stroke="white" stroke-width="1.8"
-          opacity="0.92"/>
-  <text class="node-lbl" x="1188.3333333333335" y="227.5">CM4101</text>
-  <circle id="node-CM4801" href="#row-CM4801"
-          cx="1188.3333333333335" cy="295.5" r="18"
-          fill="#1f78b4" stroke="white" stroke-width="1.8"
-          opacity="0.92"/>
-  <text class="node-lbl" x="1188.3333333333335" y="295.5">CM4801</text>
-  <circle id="node-CM4802" href="#row-CM4802"
-          cx="1188.3333333333335" cy="363.5" r="16"
-          fill="#1f78b4" stroke="white" stroke-width="2.8"
-          opacity="0.92"/>
-  <text class="node-lbl" x="1188.3333333333335" y="363.5">CM4802</text>
-  <circle id="node-CM4803" href="#row-CM4803"
-          cx="1188.3333333333335" cy="431.5" r="24"
-          fill="#1f78b4" stroke="white" stroke-width="5.2"
-          opacity="0.92"/>
-  <text class="node-lbl" x="1188.3333333333335" y="431.5">CM4803</text>
+          cx="788.3333333333334" cy="325.5" r="17.4"
+          fill="#90ed6c" stroke="white" stroke-width="1.5" opacity="0.92"/>
+
+
+
+
+
+
+  <text class="node-lbl" x="788.3333333333334" y="325.5">FH1000</text>
+
+
+
+
+  <rect id="node-MI3115" href="#row-MI3115"
+        x="762.5933333333334" y="378.65" width="51.48" height="29.699999999999996"
+        fill="#d8ff6c" stroke="white" stroke-width="1.5" opacity="0.92"/>
+
+
+
+  <text class="node-lbl" x="788.3333333333334" y="393.5">MI3115</text>
+
+
+
+
+  <rect id="node-MI4510" href="#row-MI4510"
+        x="762.5933333333334" y="446.65" width="51.48" height="29.699999999999996"
+        fill="#d8ff6c" stroke="white" stroke-width="1.5" opacity="0.92"/>
+
+
+
+  <text class="node-lbl" x="788.3333333333334" y="461.5">MI4510</text>
+
+
+
+  <rect id="node-PI2609" href="#row-PI2609"
+        x="771.9653333333333" y="513.132" width="32.736000000000004" height="32.736000000000004"
+        fill="#888888" stroke="white" stroke-width="1.5" opacity="0.92"/>
+
+
+
+
+  <text class="node-lbl" x="788.3333333333334" y="529.5">PI2609</text>
+
+
+  <polygon id="node-SO2601" href="#row-SO2601"
+           points="788.3333333333334,580.1 803.4017333333334,606.2 773.2649333333334,606.2"
+           fill="#888888" stroke="white" stroke-width="1.5" opacity="0.92"/>
+
+
+
+
+
+  <text class="node-lbl" x="788.3333333333334" y="597.5">SO2601</text>
+
+
+
+
+  <rect id="node-CM3208" href="#row-CM3208"
+        x="895.9266666666666" y="140.65" width="51.48" height="29.699999999999996"
+        fill="#6377f9" stroke="white" stroke-width="1.5" opacity="0.92"/>
+
+
+
+  <text class="node-lbl" x="921.6666666666666" y="155.5">CM3208</text>
+
+
+
+
+  <rect id="node-CM3601" href="#row-CM3601"
+        x="888.1266666666667" y="204.15" width="67.08" height="38.699999999999996"
+        fill="#6377f9" stroke="white" stroke-width="1.5" opacity="0.92"/>
+
+
+
+  <text class="node-lbl" x="921.6666666666666" y="223.5">CM3601</text>
+
+
+
+
+  <rect id="node-CM3602" href="#row-CM3602"
+        x="888.1266666666667" y="272.15" width="67.08" height="38.699999999999996"
+        fill="#6377f9" stroke="white" stroke-width="1.5" opacity="0.92"/>
+
+
+
+  <text class="node-lbl" x="921.6666666666666" y="291.5">CM3602</text>
+
+
+
+
+  <rect id="node-CM3603" href="#row-CM3603"
+        x="888.1266666666667" y="340.15" width="67.08" height="38.699999999999996"
+        fill="#6377f9" stroke="white" stroke-width="1.5" opacity="0.92"/>
+
+
+
+  <text class="node-lbl" x="921.6666666666666" y="359.5">CM3603</text>
+
+
+
+  <rect id="node-CM4202" href="#row-CM4202"
+        x="905.2986666666666" y="411.132" width="32.736000000000004" height="32.736000000000004"
+        fill="#6377f9" stroke="white" stroke-width="1.5" opacity="0.92"/>
+
+
+
+
+  <text class="node-lbl" x="921.6666666666666" y="427.5">CM4202</text>
+
+
+
+  <rect id="node-CM4305" href="#row-CM4305"
+        x="905.2986666666666" y="479.132" width="32.736000000000004" height="32.736000000000004"
+        fill="#6377f9" stroke="white" stroke-width="1.5" opacity="0.92"/>
+
+
+
+
+  <text class="node-lbl" x="921.6666666666666" y="495.5">CM4305</text>
+
+
+
+  <rect id="node-CS3404" href="#row-CS3404"
+        x="903.1866666666666" y="545.02" width="36.96" height="36.96"
+        fill="#eb99fb" stroke="white" stroke-width="1.5" opacity="0.92"/>
+
+
+
+
+  <text class="node-lbl" x="921.6666666666666" y="563.5">CS3404</text>
+
+
+
+
+  <rect id="node-AE5121" href="#row-AE5121"
+        x="1030.82" y="175.55" width="48.36000000000001" height="27.900000000000002"
+        fill="#a6761d" stroke="white" stroke-width="1.5" opacity="0.92"/>
+
+
+
+  <text class="node-lbl" x="1055.0" y="189.5">AE5121</text>
+
+
+
+
+  <rect id="node-CM3205" href="#row-CM3205"
+        x="1029.26" y="242.65" width="51.48" height="29.699999999999996"
+        fill="#6377f9" stroke="white" stroke-width="1.5" opacity="0.92"/>
+
+
+
+  <text class="node-lbl" x="1055.0" y="257.5">CM3205</text>
+
+
+
+
+
+  <polygon id="node-CM4307" href="#row-CM4307"
+           points="1055.0,305.7 1073.8298,319.3818 1066.6424,341.5182 1043.3576,341.5182 1036.1702,319.3818"
+           fill="#6377f9" stroke="white" stroke-width="1.5" opacity="0.92"/>
+
+
+  <text class="node-lbl" x="1055.0" y="325.5">CM4307</text>
+
+
+
+
+  <rect id="node-CM4701" href="#row-CM4701"
+        x="1021.46" y="374.15" width="67.08" height="38.699999999999996"
+        fill="#6377f9" stroke="white" stroke-width="1.5" opacity="0.92"/>
+
+
+
+  <text class="node-lbl" x="1055.0" y="393.5">CM4701</text>
+
+
+
+
+  <rect id="node-CM4702" href="#row-CM4702"
+        x="1021.46" y="442.15" width="67.08" height="38.699999999999996"
+        fill="#6377f9" stroke="white" stroke-width="1.5" opacity="0.92"/>
+
+
+
+  <text class="node-lbl" x="1055.0" y="461.5">CM4702</text>
+
+
+
+  <rect id="node-CS4402" href="#row-CS4402"
+        x="1038.632" y="513.132" width="32.736000000000004" height="32.736000000000004"
+        fill="#eb99fb" stroke="white" stroke-width="1.5" opacity="0.92"/>
+
+
+
+
+  <text class="node-lbl" x="1055.0" y="529.5">CS4402</text>
+
+
+
+
+
+  <polygon id="node-CM4101" href="#row-CM4101"
+           points="1188.3333333333335,237.7 1207.1631333333335,251.3818 1199.9757333333334,273.5182 1176.6909333333335,273.5182 1169.5035333333335,251.3818"
+           fill="#6377f9" stroke="white" stroke-width="1.5" opacity="0.92"/>
+
+
+  <text class="node-lbl" x="1188.3333333333335" y="257.5">CM4101</text>
+
+
+
+
+
+  <polygon id="node-CM4801" href="#row-CM4801"
+           points="1188.3333333333335,305.7 1207.1631333333335,319.3818 1199.9757333333334,341.5182 1176.6909333333335,341.5182 1169.5035333333335,319.3818"
+           fill="#6377f9" stroke="white" stroke-width="1.5" opacity="0.92"/>
+
+
+  <text class="node-lbl" x="1188.3333333333335" y="325.5">CM4801</text>
+
+
+
+
+  <rect id="node-CM4802" href="#row-CM4802"
+        x="1154.7933333333335" y="374.15" width="67.08" height="38.699999999999996"
+        fill="#6377f9" stroke="white" stroke-width="1.5" opacity="0.92"/>
+
+
+
+  <text class="node-lbl" x="1188.3333333333335" y="393.5">CM4802</text>
+
+
+
+
+
+
+  <polygon id="node-CM4803" href="#row-CM4803"
+           points="1188.3333333333335,421.3 1223.1465333333335,441.4 1223.1465333333335,481.6 1188.3333333333335,501.7 1153.5201333333334,481.6 1153.5201333333334,441.4"
+           fill="#6377f9" stroke="white" stroke-width="1.5" opacity="0.92"/>
+
+  <text class="node-lbl" x="1188.3333333333335" y="461.5">CM4803</text>
 
   <!-- ── Leyenda ────────────────────────────────────────────────────────── -->
 
   <!-- Área → color -->
   <text class="leg-hdr" x="1273" y="90">Área (color)</text>
-  <rect x="1273"      y="98"  width="12" height="12" fill="#1f78b4" rx="2"/>
+  <rect x="1273"      y="98"  width="12" height="12" fill="#6377f9" rx="2"/>
   <text class="leg-txt" x="1289" y="109">Ciencia de Materiales</text>
-  <rect x="1273"      y="114" width="12" height="12" fill="#e31a1c" rx="2"/>
+  <rect x="1273"      y="114" width="12" height="12" fill="#7eb5fc" rx="2"/>
   <text class="leg-txt" x="1289" y="125">Física</text>
-  <rect x="1273"      y="130" width="12" height="12" fill="#33a02c" rx="2"/>
+  <rect x="1273"      y="130" width="12" height="12" fill="#ffd429" rx="2"/>
   <text class="leg-txt" x="1289" y="141">Matemáticas</text>
-  <rect x="1273"      y="146" width="12" height="12" fill="#ff7f00" rx="2"/>
+  <rect x="1273"      y="146" width="12" height="12" fill="#ff8000" rx="2"/>
   <text class="leg-txt" x="1289" y="157">Química</text>
-  <rect x="1273"      y="162" width="12" height="12" fill="#6a3d9a" rx="2"/>
+  <rect x="1273"      y="162" width="12" height="12" fill="#b36bff" rx="2"/>
   <text class="leg-txt" x="1289" y="173">Ciencias Básicas</text>
-  <rect x="1273"      y="178" width="12" height="12" fill="#fb9a99" rx="2"/>
+  <rect x="1273"      y="178" width="12" height="12" fill="#eb99fb" rx="2"/>
   <text class="leg-txt" x="1289" y="189">Ciencias Sociales</text>
   <rect x="1273"      y="194" width="12" height="12" fill="#a6761d" rx="2"/>
   <text class="leg-txt" x="1289" y="205">Adm. e Ingeniería</text>
-  <rect x="1273"      y="210" width="12" height="12" fill="#4dac26" rx="2"/>
+  <rect x="1273"      y="210" width="12" height="12" fill="#90ed6c" rx="2"/>
   <text class="leg-txt" x="1289" y="221">Form. Humanística</text>
-  <rect x="1273"      y="226" width="12" height="12" fill="#756bb1" rx="2"/>
+  <rect x="1273"      y="226" width="12" height="12" fill="#d8ff6c" rx="2"/>
   <text class="leg-txt" x="1289" y="237">Ing. Mecánica</text>
-  <rect x="1273"      y="242" width="12" height="12" fill="#fdb462" rx="2"/>
+  <rect x="1273"      y="242" width="12" height="12" fill="#86f5ff" rx="2"/>
   <text class="leg-txt" x="1289" y="253">Deportes y Cultura</text>
   <rect x="1273"      y="258" width="12" height="12" fill="#888888" rx="2"/>
   <text class="leg-txt" x="1289" y="269">General</text>
 
-  <!-- Créditos → tamaño -->
-  <text class="leg-hdr" x="1273" y="292">Créditos (tamaño)</text>
-  <circle cx="1279"  cy="310" r="10" fill="#aaa"/>
-  <text class="leg-txt" x="1289" y="314">0 cr</text>
-  <circle cx="1279"  cy="330" r="16" fill="#aaa"/>
-  <text class="leg-txt" x="1289" y="334">3 cr</text>
-  <circle cx="1279"  cy="354" r="24" fill="#aaa"/>
-  <text class="leg-txt" x="1289" y="358">7 cr</text>
+  <!-- Créditos → figura y tamaño -->
+  <text class="leg-hdr" x="1273" y="292">Créditos (figura)</text>
 
-  <!-- Horas → grosor borde -->
-  <text class="leg-hdr" x="1273" y="385">Horas (borde)</text>
-  <circle cx="1283" cy="402" r="9" fill="none" stroke="#555" stroke-width="1"/>
-  <text class="leg-txt" x="1297" y="406">Pocas horas</text>
-  <circle cx="1283" cy="422" r="9" fill="none" stroke="#555" stroke-width="4"/>
-  <text class="leg-txt" x="1297" y="426">Muchas horas</text>
+  <circle cx="1283" cy="308" r="8" fill="#aaa"/>
+  <text class="leg-txt" x="1295" y="312">0 cr — Círculo</text>
+
+  <polygon points="1283,320 1289.928,332.0 1276.072,332.0" fill="#aaa"/>
+  <text class="leg-txt" x="1295" y="332">1 cr — Triángulo</text>
+
+  <rect x="1275.96" y="340.96" width="14.08" height="14.08" fill="#aaa"/>
+  <text class="leg-txt" x="1295" y="352">2 cr — Cuadrado</text>
+
+  <rect x="1272.6" y="362.0" width="20.8" height="12.0" fill="#aaa"/>
+  <text class="leg-txt" x="1295" y="372">3 cr — Rectángulo</text>
+
+  <polygon points="1283,382 1290.608,387.528 1287.704,396.472 1278.296,396.472 1275.392,387.528" fill="#aaa"/>
+  <text class="leg-txt" x="1295" y="394">4 cr — Pentágono</text>
+
+  <polygon points="1283,404 1289.928,408.0 1289.928,416.0 1283,420 1276.072,416.0 1276.072,408.0" fill="#aaa"/>
+  <text class="leg-txt" x="1295" y="416">7 cr — Hexágono</text>
+
+  <!-- Horas → tamaño de figura -->
+  <text class="leg-hdr" x="1273" y="438">Horas (tamaño)</text>
+  <circle cx="1283" cy="455" r="11.6" fill="#aaa" stroke="white" stroke-width="1.5"/>
+  <text class="leg-txt" x="1313" y="459">Pocas horas</text>
+  <circle cx="1283" cy="498" r="21.200000000000003" fill="#aaa" stroke="white" stroke-width="1.5"/>
+  <text class="leg-txt" x="1313" y="502">Muchas horas</text>
 
   <!-- Tipo de enlace -->
-  <text class="leg-hdr" x="1273" y="450">Tipo de enlace</text>
-  <line x1="1273"      y1="465" x2="1308" y2="465"
+  <text class="leg-hdr" x="1273" y="528">Tipo de enlace</text>
+  <line x1="1273"      y1="542" x2="1308" y2="542"
         class="link-req" marker-end="url(#arr-req)"/>
-  <text class="leg-txt" x="1312" y="469">Requisito</text>
-  <line x1="1273"      y1="483" x2="1308" y2="483"
+  <text class="leg-txt" x="1312" y="546">Requisito</text>
+  <line x1="1273"      y1="560" x2="1308" y2="560"
         class="link-correq" marker-end="url(#arr-correq)"/>
-  <text class="leg-txt" x="1312" y="487">Correquisito</text>
+  <text class="leg-txt" x="1312" y="564">Correquisito</text>
 
 </svg>
