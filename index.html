@@ -4,328 +4,282 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Red de Cursos — Ingeniería en Materiales (Plan 1217)</title>
+
   <link rel="stylesheet" href="simple-table.css">
+  <link rel="stylesheet" href="simple-details.css">
+
   <style>
     * { margin: 0; padding: 0; box-sizing: border-box; }
 
-    body { height: 100vh; overflow: hidden; font-family: sans-serif; background: #f0f4f8; }
+    body { overflow: hidden; height: 100vh; font-family: sans-serif; }
 
-    #layout { display: flex; flex-direction: column; height: 100vh; }
+    #split { width: 100vw; height: 100vh; }
 
     #svg-panel {
-      flex: 1;
       background: white;
-      overflow: hidden;
-      min-height: 100px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      overflow: auto;
+      position: relative;
     }
-    #svg-panel object { width: 100%; height: 100%; display: block; }
+
+    #svg-panel object {
+      width: 100%;
+      height: 100%;
+      display: block;
+    }
+
+    #table-panel {
+      background: #f5f5f5;
+      padding: 15px;
+      overflow: auto;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+
+    #table-panel h3 {
+      font-size: 12px;
+      color: #555;
+      font-weight: 600;
+      flex-shrink: 0;
+    }
+
+    #tabla { flex: 1; }
 
     .gutter.gutter-vertical {
       background: #4a90e2;
       cursor: row-resize;
       height: 6px !important;
-      flex-shrink: 0;
     }
-    .gutter.gutter-vertical:hover { background: #2d6ec0; }
-
-    #table-panel {
-      background: #f5f5f5;
-      padding: 10px 12px;
-      overflow: hidden;
-      min-height: 80px;
-      display: flex;
-      flex-direction: column;
-    }
-    #table-panel h3 {
-      font-size: 12px;
-      color: #555;
-      margin-bottom: 6px;
-      font-weight: 600;
-      flex-shrink: 0;
-    }
-    #tabla { flex: 1; overflow: auto; }
-
-    /* ── Detail modal ─────────────────────────────────── */
-    #overlay {
-      display: none;
-      position: fixed; inset: 0;
-      background: rgba(0,0,0,0.35);
-      z-index: 100;
-    }
-    #detail {
-      display: none;
-      position: fixed;
-      top: 50%; left: 50%;
-      transform: translate(-50%, -50%);
-      background: white;
-      border-radius: 12px;
-      padding: 28px 32px 24px;
-      min-width: 340px;
-      max-width: 500px;
-      width: 90%;
-      z-index: 101;
-      box-shadow: 0 8px 40px rgba(0,0,0,0.22);
-    }
-    #detail .close-btn {
-      position: absolute; top: 14px; right: 18px;
-      background: none; border: none; font-size: 22px;
-      cursor: pointer; color: #aaa; line-height: 1;
-    }
-    #detail .close-btn:hover { color: #333; }
-    #detail .d-sigla {
-      display: inline-block;
-      background: #e8f0fe; color: #1a56db;
-      border-radius: 6px; padding: 2px 10px;
-      font-size: 12px; font-weight: bold;
-      margin-bottom: 6px;
-    }
-    #detail h2 {
-      font-size: 17px; color: #111;
-      margin-bottom: 16px; line-height: 1.3;
-    }
-    #detail table { width: 100%; border-collapse: collapse; }
-    #detail td {
-      padding: 7px 10px; font-size: 13px;
-      border-bottom: 1px solid #f0f0f0;
-    }
-    #detail td:first-child { color: #666; font-weight: 600; width: 42%; }
-    #detail .d-hint {
-      margin-top: 14px; font-size: 11px; color: #aaa; text-align: center;
-    }
+    .gutter.gutter-vertical:hover { background: #357abd; }
   </style>
+
+  <script src="https://cdn.jsdelivr.net/npm/split.js@1.6.5/dist/split.min.js"></script>
+  <script src="simple-table.js"></script>
 </head>
 <body>
-  <div id="layout">
+  <div id="split">
     <div id="svg-panel">
-      <object id="svg-obj" type="image/svg+xml" data="red_cursos.svg"></object>
+      <object id="svg-object" type="image/svg+xml" data="red_cursos.svg"></object>
     </div>
     <div id="table-panel">
-      <h3>Datos del plan de estudios — clic para seleccionar, Ctrl+clic para selección múltiple, doble clic para ver detalle</h3>
+      <h3>
+        Plan de Estudios — Ingeniería en Materiales (TEC, Plan 1217) &nbsp;·&nbsp;
+        Clic para seleccionar &nbsp;·&nbsp; Ctrl+clic para selección múltiple &nbsp;·&nbsp;
+        Doble clic para ver detalle &nbsp;·&nbsp; Filtrá por columna con los campos de texto
+      </h3>
       <div id="tabla"></div>
     </div>
   </div>
 
-  <!-- Detail on demand (doble clic sobre un nodo) -->
-  <div id="overlay" onclick="closeDetail()"></div>
-  <div id="detail">
-    <button class="close-btn" onclick="closeDetail()">×</button>
-    <div class="d-sigla" id="d-sigla"></div>
-    <h2 id="d-nombre"></h2>
-    <table>
-      <tbody id="d-fields"></tbody>
-    </table>
-    <p class="d-hint">Presiona Esc o haz clic afuera para cerrar</p>
-  </div>
-
-  <script src="https://cdn.jsdelivr.net/npm/split.js@1.6.5/dist/split.min.js"></script>
-  <script src="simple-table.js"></script>
   <script src="svg-controls.js"></script>
+  <script src="simple-details.js"></script>
+
   <script>
-    Split(['#svg-panel', '#table-panel'], {
-      sizes: [62, 38],
-      direction: 'vertical',
-      gutterSize: 6,
-      minSize: [80, 80]
-    });
+    let table      = null;
+    let svgControl = null;
 
-    // ── State ───────────────────────────────────────────────────────────────
-    let table    = null;
-    let svgCtrl  = null;
-    let svgDoc   = null;
-    let allData  = [];
+    // Mapas de vinculación SVG ↔ tabla
+    const svgToRowId  = new Map();  // "node-MA1001" → "row-MA1001"
+    const rowToSvgIds = new Map();  // "row-MA1001"  → ["node-MA1001"]
 
-    const svgToRow = new Map();  // "node-MA1001" → "row-MA1001"
-    const rowToSvg = new Map();  // "row-MA1001"  → "node-MA1001"
+    function loadDataFromSVG() {
+      const svgObject = document.getElementById('svg-object');
 
-    // Multi-highlight tracking
-    const hlOriginal = new Map(); // el → { s, sw }
+      svgObject.addEventListener('load', function () {
+        const svgDoc = svgObject.contentDocument;
+        if (!svgDoc) {
+          console.error('No se pudo acceder al documento SVG');
+          return;
+        }
 
-    function clearHighlights() {
-      hlOriginal.forEach((orig, el) => {
-        orig.s  != null ? el.setAttribute('stroke', orig.s)        : el.removeAttribute('stroke');
-        orig.sw != null ? el.setAttribute('stroke-width', orig.sw) : el.removeAttribute('stroke-width');
-      });
-      hlOriginal.clear();
-    }
+        // ── 1. Construir mapas SVG ↔ row desde href en los nodos ────────────
+        svgToRowId.clear();
+        rowToSvgIds.clear();
 
-    function highlightEl(el) {
-      if (!el || hlOriginal.has(el)) return;
-      hlOriginal.set(el, {
-        s:  el.getAttribute('stroke'),
-        sw: el.getAttribute('stroke-width')
-      });
-      el.setAttribute('stroke', '#e53e3e');
-      el.setAttribute('stroke-width', '3');
-    }
-
-    // ── SVG visibility (filter sync) ─────────────────────────────────────────
-    function applyVisibility(visibleSiglas) {
-      if (!svgDoc) return;
-      const vis = new Set(visibleSiglas);
-
-      svgDoc.querySelectorAll('[id^="node-"]').forEach(el => {
-        el.style.display = vis.has(el.id.replace('node-', '')) ? '' : 'none';
-      });
-      svgDoc.querySelectorAll('[id^="lbl-"]').forEach(el => {
-        el.style.display = vis.has(el.id.replace('lbl-', '')) ? '' : 'none';
-      });
-      svgDoc.querySelectorAll('[data-src]').forEach(el => {
-        const ok = vis.has(el.getAttribute('data-src')) &&
-                   vis.has(el.getAttribute('data-dest'));
-        el.style.display = ok ? '' : 'none';
-      });
-    }
-
-    // ── Detail modal ─────────────────────────────────────────────────────────
-    const FIELD_LABELS = {
-      semestre: 'Semestre',
-      creditos: 'Créditos',
-      horas:    'Horas semanales',
-      area:     'Área'
-    };
-
-    function showDetail(rowId) {
-      const row = allData.find(r => r._rowId === rowId);
-      if (!row) return;
-
-      document.getElementById('d-sigla').textContent  = row.sigla || row.id || '';
-      document.getElementById('d-nombre').textContent = row.nombre || '';
-
-      document.getElementById('d-fields').innerHTML = Object.entries(FIELD_LABELS)
-        .map(([k, label]) => `<tr><td>${label}</td><td>${row[k] ?? '—'}</td></tr>`)
-        .join('');
-
-      document.getElementById('overlay').style.display = 'block';
-      document.getElementById('detail').style.display  = 'block';
-    }
-
-    function closeDetail() {
-      document.getElementById('overlay').style.display = 'none';
-      document.getElementById('detail').style.display  = 'none';
-    }
-
-    document.addEventListener('keydown', e => { if (e.key === 'Escape') closeDetail(); });
-
-    // ── Main init ─────────────────────────────────────────────────────────────
-    function init() {
-      const obj = document.getElementById('svg-obj');
-
-      obj.addEventListener('load', () => {
-        svgDoc = obj.contentDocument;
-        if (!svgDoc) return;
-
-        // Build svgId ↔ rowId maps from href attributes on node elements
-        svgDoc.querySelectorAll('[id^="node-"][href]').forEach(el => {
-          const href = el.getAttribute('href');
-          if (href && href.startsWith('#')) {
-            const rowId = href.slice(1);
-            svgToRow.set(el.id, rowId);
-            rowToSvg.set(rowId, el.id);
+        // Primero intentar desde v:row hrefs (estándar ODViz)
+        const vRows = svgDoc.getElementsByTagName('v:row');
+        for (let row of vRows) {
+          const rowId = row.getAttribute('id');
+          const hrefs = row.getAttribute('hrefs');
+          if (rowId && hrefs) {
+            const ids = hrefs.split(',').map(h => h.trim()).filter(Boolean);
+            rowToSvgIds.set(rowId, ids);
+            ids.forEach(svgId => svgToRowId.set(svgId, rowId));
           }
-        });
+        }
 
-        // Read embedded v:table
-        const tables = svgDoc.getElementsByTagName('v:table');
-        if (!tables.length) { console.error('<v:table> no encontrada'); return; }
-        const vtable = tables[0];
-
-        const cols = vtable.getAttribute('columns').split(',').map(c => c.trim());
-        const vrows = vtable.getElementsByTagName('v:row');
-
-        allData = [];
-        Array.from(vrows).forEach(vrow => {
-          const parts = vrow.textContent.trim().split(',');
-          const rec   = { _rowId: vrow.getAttribute('id') };
-          cols.forEach((col, i) => {
-            const val = (parts[i] || '').trim();
-            rec[col]  = (val !== '' && !isNaN(val)) ? parseFloat(val) : val;
+        // Fallback: leer href desde los elementos SVG directamente
+        if (svgToRowId.size === 0) {
+          svgDoc.querySelectorAll('[href]').forEach(el => {
+            const href = el.getAttribute('href');
+            if (href && href.startsWith('#') && el.id) {
+              const rowId = href.substring(1);
+              svgToRowId.set(el.id, rowId);
+              if (!rowToSvgIds.has(rowId)) rowToSvgIds.set(rowId, []);
+              rowToSvgIds.get(rowId).push(el.id);
+            }
           });
-          allData.push(rec);
-        });
+        }
 
-        if (!allData.length) { console.error('Sin datos en v:table'); return; }
+        // ── 2. Leer v:table con los datos
+        let factTable = null;
+        const allTables = svgDoc.getElementsByTagName('v:table');
+        for (let t of allTables) {
+          if (t.getAttribute('visualization') === 'chart') {
+            factTable = t;
+            break;
+          }
+        }
 
-        // Columns to display (skip duplicate 'id' since 'sigla' shows the same)
-        const displayCols = cols
-          .filter(c => c !== 'id')
-          .map(c => ({
-            field: c,
-            title: c.charAt(0).toUpperCase() + c.slice(1),
-            width: `${100 / (cols.length - 1)}%`
+        if (!factTable) {
+          console.error('<v:table visualization="chart"> no encontrada en el SVG');
+          return;
+        }
+
+        const columnNames = factTable.getAttribute('columns')
+          .split(',').map(c => c.trim());
+
+        const rows   = factTable.getElementsByTagName('v:row');
+        const data   = [];
+
+        for (let row of rows) {
+          const rowId  = row.getAttribute('id');
+          const parts  = row.textContent.trim().split(',');
+          const record = { _rowId: rowId };
+          columnNames.forEach((col, idx) => {
+            const val = (parts[idx] || '').trim();
+            record[col] = (val !== '' && !isNaN(val)) ? parseFloat(val) : val;
+          });
+          data.push(record);
+        }
+
+        if (data.length === 0) {
+          console.error('Sin filas de datos en v:table');
+          return;
+        }
+
+        // ── 3. Definir columnas para SimpleTable 
+        const columns = columnNames
+          .filter(c => c !== 'id')   // sigla ya actúa como ID visible
+          .map(key => ({
+            field: key,
+            title: {
+              sigla:    'Sigla',
+              nombre:   'Nombre',
+              semestre: 'Semestre',
+              creditos: 'Créditos',
+              horas:    'Horas',
+              area:     'Área'
+            }[key] || key.charAt(0).toUpperCase() + key.slice(1),
+            width: `${100 / (columnNames.length - 1)}%`
           }));
 
-        // Create SimpleTable
+        // ── 4. Instanciar SimpleDetail (doble clic → detalle en demanda)
+        const detailBox = new SimpleDetail({ title: 'Detalle del Curso' });
+
+        // ── 5. Instanciar SimpleTable 
         table = new SimpleTable('tabla', {
-          data:      allData,
-          columns:   displayCols,
+          data:       data,
+          columns:    columns,
           selectable: true,
-          height:    '100%',
-          onRowSelect: selectedRows => {
-            // Rebuild SVG highlights to match the new table selection
-            clearHighlights();
+          height:     '100%',
+
+          // Selección en tabla → resaltar en SVG
+          onRowSelect: (selectedRows) => {
+            if (!svgControl) return;
+            const targetSvgIds = [];
             selectedRows.forEach(row => {
-              const svgId = rowToSvg.get(row._rowId);
-              if (svgId && svgDoc) highlightEl(svgDoc.getElementById(svgId));
+              const ids = rowToSvgIds.get(row._rowId) || [];
+              targetSvgIds.push(...ids);
             });
+            svgControl.selectMultiple(targetSvgIds);
+          },
+
+          // Doble clic en fila de tabla → detalle
+          onRowDblClick: (rowData) => {
+            detailBox.show(rowData, columns);
+          },
+
+          // Filtro en tabla → ocultar/mostrar nodos y enlaces en SVG
+          onFilter: (filteredRows) => {
+            if (!svgControl) return;
+            const visibleSvgIds = filteredRows.flatMap(
+              row => rowToSvgIds.get(row._rowId) || []
+            );
+            svgControl.filterByIds(visibleSvgIds);
           }
         });
 
-        // Monkey-patch applyFilters to sync SVG visibility
-        const _applyFilters = table.applyFilters.bind(table);
-        table.applyFilters = function () {
-          _applyFilters();
-          applyVisibility(table.filteredData.map(r => r.sigla));
-        };
+        // ── 6. Conectar svg-controls cuando esté listo 
+        const connectSVGControl = () => {
+          if (!svgObject.__SVGControl) {
+            setTimeout(connectSVGControl, 50);
+            return;
+          }
 
-        // Wire up svg-controls
-        const connectControl = () => {
-          if (!obj.__SVGControl) { setTimeout(connectControl, 50); return; }
-          svgCtrl = obj.__SVGControl;
+          svgControl = svgObject.__SVGControl;
 
-          // SVG click → single-select: deselect previous, select new
-          svgCtrl.setCallback('select', el => {
-            if (!el) {
-              clearHighlights();
-              table.selectedRows.clear();
-              table.render();
-              return;
-            }
-            const rowId = svgToRow.get(el.id);
-            if (!rowId) return;
-            const row = allData.find(r => r._rowId === rowId);
-            if (!row) return;
-
-            if (table.selectedRows.has(row)) {
-              // Clic en el mismo nodo → deseleccionar
-              clearHighlights();
-              table.selectedRows.clear();
-            } else {
-              // Clic en nodo diferente → reemplaza selección anterior
-              clearHighlights();
-              table.selectedRows.clear();
-              table.selectedRows.add(row);
-              highlightEl(el);
+          // Clic en nodo SVG → seleccionar fila en tabla
+          svgControl.setCallback('select', (svgElement) => {
+            if (!table) return;
+            table.selectedRows.clear();
+            if (svgElement && svgToRowId.has(svgElement.id)) {
+              const rowId    = svgToRowId.get(svgElement.id);
+              const targetRow = table.data.find(
+                r => String(r._rowId) === String(rowId)
+              );
+              if (targetRow) table.selectedRows.add(targetRow);
             }
             table.render();
           });
 
-          // Double-click on a node → detail modal (capture phase beats svg-controls reset)
-          svgDoc.documentElement.addEventListener('dblclick', e => {
-            let node = e.target;
-            while (node && node !== svgDoc.documentElement && !(node.id && node.id.startsWith('node-')))
-              node = node.parentNode;
-            if (node && node.id && node.id.startsWith('node-')) {
-              e.stopImmediatePropagation();
-              const rowId = svgToRow.get(node.id);
-              if (rowId) showDetail(rowId);
+          // Selección múltiple en SVG (Ctrl+clic) → marcar filas en tabla
+          svgControl.setCallback('multiSelect', (svgElements) => {
+            if (!table) return;
+            table.selectedRows.clear();
+            svgElements.forEach(el => {
+              if (el && svgToRowId.has(el.id)) {
+                const rowId = svgToRowId.get(el.id);
+                const targetRow = table.data.find(
+                  r => String(r._rowId) === String(rowId)
+                );
+                if (targetRow) table.selectedRows.add(targetRow);
+              }
+            });
+            table.render();
+            if (typeof table.options.onRowSelect === 'function') {
+              table.options.onRowSelect(Array.from(table.selectedRows));
             }
-          }, true /* capture */);
+          });
+
+          // Doble clic en nodo SVG → detalle en demanda
+          svgControl.setCallback('dblclick', (svgElement) => {
+            if (!table || !svgElement) return;
+            const rowId = svgToRowId.get(svgElement.id);
+            if (!rowId) return;
+            const row = table.data.find(
+              r => String(r._rowId) === String(rowId)
+            );
+            if (row) detailBox.show(row, columns);
+          });
         };
-        connectControl();
+
+        connectSVGControl();
       });
     }
 
-    init();
+    // ── Split panel vertical 
+    Split(['#svg-panel', '#table-panel'], {
+      sizes:     [55, 45],
+      direction: 'vertical',
+      gutterSize: 6,
+      minSize:   [100, 150]
+    });
+
+    loadDataFromSVG();
   </script>
 </body>
 </html>

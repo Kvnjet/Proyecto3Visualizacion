@@ -3,7 +3,8 @@
     zoomEnabled: true,
     panEnabled: true,
     selectEnabled: true,
-    callbacks: { zoom: null, pan: null, select: null }
+    selectionColor: 'red',
+    callbacks: { zoom: null, pan: null, select: null, multiSelect: null, dblclick: null }
   };
 
   const run = () => {
@@ -20,7 +21,7 @@
         console.error('CORS error: Cannot access contentDocument', err);
         return;
       }
-
+      
       if (!svgDoc) return;
       const svg = svgDoc.documentElement;
       if (!svg || svg.tagName.toLowerCase() !== 'svg') return;
@@ -29,9 +30,8 @@
       let isDragging = false;
       let panStart = { x: 0, y: 0 };
       let clickStart = { x: 0, y: 0, time: 0 };
-      let selected = null;
-      // Flag to prevent onClick double-firing after onPointerUp already handled the click
-      let didSelectOnPointerUp = false;
+      let selectedElements = [];
+      const originalStyles = new Map();
 
       if (!svg.getAttribute('viewBox')) {
         try {
@@ -57,6 +57,38 @@
         return inv ? pt.matrixTransform(inv) : null;
       };
 
+      const clearSelection = () => {
+        selectedElements.forEach(element => {
+          const old = originalStyles.get(element);
+          if (old) {
+            old.s ? element.setAttribute('stroke', old.s) : element.removeAttribute('stroke');
+            old.sw ? element.setAttribute('stroke-width', old.sw) : element.removeAttribute('stroke-width');
+          }
+        });
+        originalStyles.clear();
+        selectedElements = [];
+      };
+
+      const applySelectionStyle = (element) => {
+        if (!element || element === svg) return;
+        
+        if (!originalStyles.has(element)) {
+          originalStyles.set(element, {
+            s: element.getAttribute('stroke'),
+            sw: element.getAttribute('stroke-width')
+          });
+        }
+        
+        if (!selectedElements.includes(element)) {
+          selectedElements.push(element);
+        }
+
+        element.setAttribute('stroke', state.selectionColor);
+        const ctm = svg.getScreenCTM();
+        const scale = ctm ? Math.hypot(ctm.a, ctm.b) : 1;
+        element.setAttribute('stroke-width', (2 / scale).toString());
+      };
+
       const API = {
         setCallback: (type, fn) => {
           if (Object.prototype.hasOwnProperty.call(state.callbacks, type)) state.callbacks[type] = fn;
@@ -67,12 +99,9 @@
           if (Object.prototype.hasOwnProperty.call(state, key)) state[key] = !!value;
           else console.error('Invalid feature name');
         },
-        // Visual highlighting is handled entirely by the host page via the select callback.
-        // API.select only tracks which element is "current" and fires the callback.
-        select: (id) => {
-          if (!state.selectEnabled) return;
-          selected = id ? svgDoc.getElementById(id) : null;
-          if (state.callbacks.select) state.callbacks.select(selected);
+        setSelectionColor: (color) => {
+          state.selectionColor = color;
+          selectedElements.forEach(el => el.setAttribute('stroke', color));
         },
         zoom: (factor, clientX, clientY) => {
           if (!state.zoomEnabled) return;
@@ -96,6 +125,46 @@
           vb.y -= dy * scaleY;
           if (state.callbacks.pan) state.callbacks.pan(dx, dy);
         },
+        select: (id, keepSelection = false) => {
+          if (!state.selectEnabled) return;
+          
+          if (!keepSelection) {
+            clearSelection();
+          }
+          
+          const element = id ? svgDoc.getElementById(id) : null;
+          if (element && element !== svg) {
+            applySelectionStyle(element);
+          }
+          
+          if (keepSelection && state.callbacks.multiSelect) {
+            state.callbacks.multiSelect(selectedElements);
+          } else if (state.callbacks.select) {
+            state.callbacks.select(selectedElements[0] || null);
+          }
+        },
+        selectMultiple: (ids) => {
+          if (!state.selectEnabled) return;
+          clearSelection();
+          if (!Array.isArray(ids)) return;
+
+          ids.forEach(id => {
+            const element = svgDoc.getElementById(id);
+            if (element && element !== svg) applySelectionStyle(element);
+          });
+        },
+        filterByIds: (visibleSvgIds) => {
+          const visibleSet = new Set(visibleSvgIds);
+          const showAll = visibleSet.size === 0;
+          svgDoc.querySelectorAll('[id]').forEach(el => {
+            if (el === svg) return;
+            if (showAll || visibleSet.has(el.id)) {
+              el.removeAttribute('display');
+            } else {
+              el.setAttribute('display', 'none');
+            }
+          });
+        },
         reset: () => {
           vb.x = originalVB.x;
           vb.y = originalVB.y;
@@ -116,67 +185,77 @@
 
       let clickTarget = null;
       const onPointerDown = (e) => {
-        clickTarget = e.target;
-        svg.setPointerCapture && svg.setPointerCapture(e.pointerId);
         if (e.button !== 0) return;
-        panning = true;
-        isDragging = false;
-        panStart = { x: e.clientX, y: e.clientY };
-        clickStart = { x: e.clientX, y: e.clientY, time: Date.now() };
-        svg.style.cursor = 'grabbing';
-        svg.setPointerCapture(e.pointerId);
-      };
 
-      // onClick handles all selection: it walks up the DOM to find the nearest element
-      // with an id (handles clicks on child elements inside groups).
-      // onPointerUp is only for drag detection — it does NOT call API.select to avoid
-      // double-firing the select callback on the same click.
-      const onClick = (e) => {
-        if (didSelectOnPointerUp) {
-          didSelectOnPointerUp = false;
-          return;
-        }
-        if (isDragging) return;
-        const el = clickTarget || e.target;
-        let node = el;
-        while (node && node !== svg && !node.id) node = node.parentNode;
-        const targetId = node && node !== svg ? node.id : null;
-        API.select(targetId);
-        clickTarget = null;
+
+        clickTarget = e.target;
+        isDragging = false;
+        clickStart = { x: e.clientX, y: e.clientY, time: Date.now() };
+
+        panning = true;
+        panStart = { x: e.clientX, y: e.clientY };
       };
 
       const onPointerMove = (e) => {
         if (!panning) return;
-        const dx = e.clientX - panStart.x;
-        const dy = e.clientY - panStart.y;
-        if (!isDragging && (Math.abs(dx) > 4 || Math.abs(dy) > 4)) isDragging = true;
-        API.pan(dx, dy);
-        panStart = { x: e.clientX, y: e.clientY };
+        const dx = e.clientX - clickStart.x;
+        const dy = e.clientY - clickStart.y;
+        
+        if (!isDragging && (Math.abs(dx) > 6 || Math.abs(dy) > 6)) {
+          isDragging = true;
+          svg.style.cursor = 'grabbing';
+          if (svg.setPointerCapture) {
+            svg.setPointerCapture(e.pointerId);
+          }
+        }
+
+        if (panning && isDragging) {
+          const pDx = e.clientX - panStart.x;
+          const pDy = e.clientY - panStart.y;
+          API.pan(pDx, pDy);
+          panStart = { x: e.clientX, y: e.clientY };
+        }
       };
 
       const onPointerUp = (e) => {
         if (!panning) return;
-        panning = false;
-        svg.style.cursor = 'default';
-        svg.releasePointerCapture(e.pointerId);
 
-        const dist = Math.hypot(e.clientX - clickStart.x, e.clientY - clickStart.y);
-        const duration = Date.now() - clickStart.time;
-        // Only handle direct hits (e.target has its own id) and only when not dragging.
-        // onClick below handles DOM-walking for child elements.
-        if (!isDragging && dist < 6 && duration < 500) {
-          const targetId = e.target && e.target.id ? e.target.id : null;
-          if (targetId) {
-            API.select(targetId);
-            didSelectOnPointerUp = true;
-            // Reset flag after click event fires (which follows pointerup synchronously)
-            setTimeout(() => { didSelectOnPointerUp = false; }, 0);
-          }
-          // If no direct targetId, let onClick handle it via DOM walking
+        svg.style.cursor = 'default';
+        if (svg.releasePointerCapture) {
+          try { svg.releasePointerCapture(e.pointerId); } catch(ex) {}
         }
+        
+        panning = false;
       };
 
-      const onDblClick = () => API.reset();
+      const onClick = (e) => {
+        const dist = Math.hypot(e.clientX - clickStart.x, e.clientY - clickStart.y);
+        if (isDragging || dist >= 6) {
+          e.preventDefault();
+          e.stopPropagation();
+          clickTarget = null;
+          return;
+        }
+        
+        const el = clickTarget || e.target; 
+        let node = el;
+        while (node && node !== svg && !node.id) node = node.parentNode;
+        const targetId = node && node !== svg ? node.id : null;
+        
+        API.select(targetId, e.shiftKey);
+        clickTarget = null;
+      };
+
+      const onDblClick = (e) => {
+        let node = e.target;
+        while (node && node !== svg && !node.id) node = node.parentNode;
+        const targetId = node && node !== svg ? node.id : null;
+        //API.reset();
+        if (targetId && state.callbacks.dblclick) {
+          const element = svgDoc.getElementById(targetId);
+          state.callbacks.dblclick(element);
+        }
+      };
 
       svg.addEventListener('wheel', onWheel, { passive: false });
       svg.addEventListener('pointerdown', onPointerDown);
@@ -184,7 +263,7 @@
       svg.addEventListener('pointerup', onPointerUp);
       svg.addEventListener('pointercancel', onPointerUp);
       svg.addEventListener('dblclick', onDblClick);
-      svg.addEventListener('click', onClick);
+      svg.addEventListener('click', onClick, { capture: true });
 
       obj.__SVGControl = API;
 
@@ -195,7 +274,7 @@
         svg.removeEventListener('pointerup', onPointerUp);
         svg.removeEventListener('pointercancel', onPointerUp);
         svg.removeEventListener('dblclick', onDblClick);
-        svg.removeEventListener('click', onClick);
+        svg.removeEventListener('click', onClick, { capture: true });
         try { delete obj.__SVGControl; } catch (e) { obj.__SVGControl = undefined; }
       };
     };
